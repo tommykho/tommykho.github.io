@@ -161,6 +161,33 @@
       font-family: "Font Awesome 5 Brands";
     }
 
+.github {
+  z-index: 10000;
+  top: 10px;
+  right: 10px;
+  position: fixed;
+  border-radius: 5px;
+  padding: 6px 6px 3px 6px;
+  box-shadow: 0.1em 0.1em 0.4em #000;
+  line-height: 1;
+  font-family: system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+    sans-serif;
+  text-align: center;
+  & a:hover, a:link, a:visited, a:active {
+    color: #000;
+    text-decoration: none;
+  }
+  & img {
+    height: 20px;
+  }
+  & #gh-project {
+    font-size: 20px;
+    padding-left: 5px;
+    font-weight: bold;
+    vertical-align: bottom;
+  }
+}
+
     /* Wrapper */
     @-moz-keyframes wrapper {
       0% {
@@ -1126,6 +1153,17 @@
 
     </div>
   </div>
+
+  <!-- Floating GitHub Button -->
+  <div class="github">
+    <div>
+      <a class="github-button" href="https://github.com/tommykho" data-color-scheme="no-preference: dark_high_contrast; light: light; dark: dark;" data-size="large" aria-label="Follow @buttons on GitHub">Follow @tommykho</a><br />
+      <a class="github-button" href="https://github.com/tommykho/tommykho.github.io" data-color-scheme="no-preference: dark_high_contrast; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star buttons/github-buttons on GitHub">Star</a>
+      <a class="github-button" href="https://github.com/tommykho/tommykho.github.io/fork" data-icon="octicon-repo-forked" data-color-scheme="no-preference: dark_high_contrast; light: light; dark: dark;" aria-label="Fork buttons/github-buttons on GitHub">Fork</a>
+    </div>
+  </div>
+
+  <script async="" defer="" src="https://buttons.github.io/buttons.js"></script>
   <script href="assets/js/main.js"></script>
   <script>
     window.onload = function() {
