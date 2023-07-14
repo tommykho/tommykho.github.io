@@ -71,6 +71,16 @@ model-viewer {
   font-size: 0.8em;
 }
 
+.HotspotAnnotation {
+  opacity: 0;
+  visibility: hidden;
+}	  
+
+.shown {
+  opacity: 1;
+  visibility: visible;
+}
+	  
 /* This keeps child nodes hidden while the element loads */
 :not(:defined) > * {
   display: none;
@@ -84,7 +94,7 @@ model-viewer {
   <script>
 $(document).ready(function () {
   $("#toggleHS").click(function () {
-    $( ".HotspotAnnotation" ).toggleClass( "hidden" );
+    $( ".HotspotAnnotation" ).toggleClass( "shown" );
   });
 });
     
