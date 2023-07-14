@@ -1,0 +1,130 @@
+<head>
+  <title>&nbsp;</title>
+  <meta name="google" content="notranslate" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style> 
+body {
+  background-color: unset;
+}
+
+container {
+  top: 0px;
+  left: 0px;
+  margin: 0;
+  padding: 0;
+}
+
+model-viewer {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 620px;
+  background-color: #000;
+  overflow-x: hidden;
+}
+
+.hotspot {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgba(129, 129, 255, 0.6);
+  box-sizing: border-box;
+  pointer-events: none;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.hotspot[slot="hotspot-hand"] {
+  --min-hotspot-opacity: 0;
+  background-color: red;
+}
+
+.hotspot[slot="hotspot-foot"]:not([data-visible]) {
+  background-color: transparent;
+  border: 3px solid blue;
+}
+
+.caption {
+  position: absolute;
+  top: 0;
+  left: 100;
+  background-color: rgba(129, 255, 129, 0.8);
+  position: absolute;
+  transform: translate(10px, 10px);
+  border-radius: 6px;
+  padding: 6px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.annotation, .HotspotAnnotation {
+  background-color: rgba(129, 255, 129, 0.8);
+  position: absolute;
+  transform: translate(10px, 10px);
+  border-radius: 6px;
+  padding: 6px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 0.8em;
+}
+
+/* This keeps child nodes hidden while the element loads */
+:not(:defined) > * {
+  display: none;
+}
+  </style>
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  <script type="module" src=https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js></script>
+  <script>
+
+async function exportGLB() {
+  const modelViewer = document.getElementById("model");
+  const glTF = await modelViewer.exportScene();
+  const file = new File([glTF], "export.glb");
+  const link = document.createElement("a");
+  link.download = file.name;
+  link.href = URL.createObjectURL(file);
+  link.click();
+}
+  </script>
+
+<!--// BEGIN inline code //-->   
+        <model-viewer id="model" ar ar-modes="webxr scene-viewer quick-look" camera-controls touch-action="pan-y" src="
+
+./3136N501.glb
+
+" shadow-intensity="1" loading="lazy-load" style="background-color: unset;" poster="
+
+./3136N501.png
+
+">
+<button class="Hotspot" slot="hotspot-1" data-position="-189.7668299214467m 10.233691207976346m -47.72654376554283m" data-normal="0.24663975555453888m -0.00006100289571443668m 0.9691072320742654m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">KG1-1</div>
+    </button><button class="Hotspot" slot="hotspot-2" data-position="-64.06075111106269m 9.990682836268672m -47.70164046725324m" data-normal="-0.18095706113170554m -2.1837886997175064e-16m 0.9834909974303662m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">KG1_6</div>
+    </button><button class="Hotspot" slot="hotspot-3" data-position="139.80925838894268m 5.782167543604611m -48.7655410766601m" data-normal="0m -2.220446049250313e-16m 1m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">KG1-14</div>
+    </button><button class="Hotspot" slot="hotspot-4" data-position="190.79934186208848m 7.88150035676416m -47.91652612524348m" data-normal="0.06847542730595896m -0.00372098963452944m 0.9976458640677093m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">KG1_PS2</div>
+    </button><button class="Hotspot" slot="hotspot-5" data-position="-189.9271119769387m 7.351055907927039m 36.77065024553871m" data-normal="0.29777654484296184m 0.00015561260369875674m 0.9546355876071796m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">KG2-1</div>
+    </button><button class="Hotspot" slot="hotspot-6" data-position="-63.845681570294516m 6.787413132228827m 37.04693347370625m" data-normal="-0.18096189959201328m -2.1837867229365147e-16m 0.9834901071673524m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">KG2_6</div>
+    </button><button class="Hotspot" slot="hotspot-7" data-position="138.91634981680662m 4.403077983544555m 35.943458557128906m" data-normal="0m -2.220446049250313e-16m 1m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">KG2-14</div>
+    </button><button class="Hotspot" slot="hotspot-8" data-position="190.80906630390268m 7.393208473850897m 36.789984835527434m" data-normal="0.06847542730595896m -0.00372098963452944m 0.9976458640677093m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">KG2_PS2</div>
+    </button>
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+          <div class="annotation"><i class="fa-brands fa-unity"></i> 3136N501 <button class="btn btn-light text-end" style="--bs-btn-font-size: 0.60rem; --btn-padding-x: 0.3em" onclick="exportGLB()"><i class="fa fa-cloud-download" aria-hidden="true"></i> Dowload GLB </button>
+          </div>
+        </model-viewer>
+<!--// END inline code //-->
+</body>
