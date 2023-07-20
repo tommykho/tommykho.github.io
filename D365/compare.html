@@ -29,6 +29,16 @@
   background: #000;
   color: #FFF;
 }
+
+td.highlight {
+    font-weight: bold;
+    background-color: whitesmoke !important;
+}
+ 
+html.dark td.highlight {
+    font-weight: bold;
+    background-color: rgba(var(--dt-col-hover), 0.082) !important;
+}
 </style>
 </head>
 
@@ -48,7 +58,36 @@ toggleElements.forEach((elt) => {
   elt.addEventListener("click", () => {
     elt.toggleAttribute("active");
     $(elt).find('yui3-datatable-table').toggleClass('normal datatables_wrapper');
-    table = $("#datatables_wrapper").DataTable({});
+    table = $("#datatables_wrapper").DataTable({
+		columnDefs: [ {
+			targets: 1,
+			data: "PN",
+            render: function (data, type) {
+                return '<a href="https://elmaaccess.elma.net/#q=' + data + '&number=' + data + '">' + data + '</a>';
+            }
+		},{
+			targets: 6,
+			data: "Status",
+			render: function (data, type) {
+                return '<progress value="' + data + '" max="1000"></progress> &nbsp;' + data;
+            }
+		}]
+	});
+	/*
+	table.on('mouseenter', 'td', function () {
+    let colIdx = table.cell(this).index().column;
+ 
+    table
+        .cells()
+        .nodes()
+        .each((el) => el.classList.remove('highlight'));
+ 
+    table
+        .column(colIdx)
+        .nodes()
+        .each((el) => el.classList.add('highlight'));
+	});
+	*/
   });
 });
 
