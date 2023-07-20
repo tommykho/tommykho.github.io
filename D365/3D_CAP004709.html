@@ -1,0 +1,147 @@
+<head>
+  <title>&nbsp;</title>
+  <meta name="google" content="notranslate" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style> 
+body {
+  background-color: unset;
+}
+
+container {
+  top: 0px;
+  left: 0px;
+  margin: 0;
+  padding: 0;
+}
+
+model-viewer {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 550px;
+  background-color: #000;
+  overflow-x: hidden;
+}
+
+.hotspot {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgba(129, 129, 255, 0.6);
+  box-sizing: border-box;
+  pointer-events: none;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.hotspot[slot="hotspot-hand"] {
+  --min-hotspot-opacity: 0;
+  background-color: red;
+}
+
+.hotspot[slot="hotspot-foot"]:not([data-visible]) {
+  background-color: transparent;
+  border: 3px solid blue;
+}
+
+.caption {
+  position: absolute;
+  top: 0;
+  left: 100;
+  background-color: rgba(129, 255, 129, 0.8);
+  position: absolute;
+  transform: translate(10px, 10px);
+  border-radius: 6px;
+  padding: 6px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.annotation, .HotspotAnnotation {
+  background-color: rgba(129, 255, 129, 0.8);
+  position: absolute;
+  transform: translate(-4px, 22px);
+  border-radius: 6px;
+  padding: 6px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 0.8em;
+  width: fit-content;
+  white-space: nowrap;
+}
+ 
+.HotspotAnnotation {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.HotspotAnnotation::after{
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 16px solid rgba(129, 255, 129, 0.8);
+  border-right: 4px solid transparent;
+  border-bottom: 4px solid rgba(129, 255, 129, 0.8);
+  border-top: 16px solid transparent;
+  left: 9px;
+  bottom: 31px;
+} 
+
+.shown {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* This keeps child nodes hidden while the element loads */
+:not(:defined) > * {
+  display: none;
+}
+  </style>
+</head>
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  <script type="module" src=https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js></script>
+  <script>
+$(document).ready(function () {
+  $("#toggleHS").click(function () {
+    $( ".HotspotAnnotation" ).toggleClass( "shown" );
+  });
+});
+
+async function exportGLB() {
+  const modelViewer = document.getElementById("model");
+  const glTF = await modelViewer.exportScene();
+  const file = new File([glTF], "export.glb");
+  const link = document.createElement("a");
+  link.download = file.name;
+  link.href = URL.createObjectURL(file);
+  link.click();
+}
+  </script>
+
+<!--// BEGIN inline code //-->   
+        <model-viewer id="model" ar ar-modes="webxr scene-viewer quick-look" camera-controls touch-action="pan-y" src="
+
+./CAP004709.glb
+
+" shadow-intensity="1" loading="lazy-load" camera-orbit="-77.99deg 73.08deg 0.6529m" style="background-color: unset;" poster="
+
+./CAP004709.png
+
+">
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+          <div class="annotation">
+			<i class="fa-brands fa-unity"></i> CAP004709 
+			<button class="btn btn-light text-end" style="--bs-btn-font-size: 0.60rem; --btn-padding-x: 0.3em" id="toggleHS"><i class="fa fa-eye" aria-hidden="true"></i> Hotspots </button>
+			<button class="btn btn-light text-end" style="--bs-btn-font-size: 0.60rem; --btn-padding-x: 0.3em" onclick="exportGLB()"><i class="fa fa-cloud-download" aria-hidden="true"></i> Dowload GLB </button>
+          </div>
+        </model-viewer>
+<!--// END inline code //-->
+</body>
