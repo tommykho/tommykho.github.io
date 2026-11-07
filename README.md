@@ -3,6 +3,21 @@
 # tommykho.github.io
 To view my GitHub Portal, a collection of my source codes showcasing all of my open source projects, check out https://tommykho.github.io/
 
+## Featured sites
+
+| Site | Repo |
+|---|---|
+| [About](https://tommykho.github.io/about/) | [tommykho/about](https://github.com/tommykho/about) |
+| [Sun Tzu · Modern Field Manual](https://tommykho.github.io/suntze/) | [tommykho/suntze](https://github.com/tommykho/suntze) |
+| [Five Rings · Modern Field Manual](https://tommykho.github.io/fiverings/) | [tommykho/fiverings](https://github.com/tommykho/fiverings) |
+| [Hopbit](https://tommykho.github.io/hopbit/) | [tommykho/hopbit](https://github.com/tommykho/hopbit) |
+
+## Home page structure
+
+- `index.html` — hero (panning mountains, 3D dragon, socials), ribbon manifesto, featured sites, toolkit, about teaser, labs, footer
+- `assets/css/home.css` — all home styles
+- `assets/js/home.js` — reveals, ribbon canvas, stacking panels, spotlight (vanilla JS)
+
 ## Getting Started
 
 To begin using this code, choose one of the following options to get started:
