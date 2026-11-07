@@ -12,6 +12,17 @@ To view my GitHub Portal, a collection of my source codes showcasing all of my o
 | [Five Rings · Modern Field Manual](https://tommykho.github.io/fiverings/) | [tommykho/fiverings](https://github.com/tommykho/fiverings) |
 | [Hopbit](https://tommykho.github.io/hopbit/) | [tommykho/hopbit](https://github.com/tommykho/hopbit) |
 
+## Production and stage
+
+One Pages site, two channels, built by `.github/workflows/pages.yml`:
+
+| Branch | URL | Notes |
+|---|---|---|
+| `main` | https://tommykho.github.io/ | production |
+| `stage` | https://tommykho.github.io/stage/ | beta: `noindex`, STAGE badge |
+
+A push to either branch rebuilds both. Merge `stage` into `main` to promote. Keep the workflow file the same on both branches. Link to sister sites with root paths (`/about/`, `/suntze/`) so links work from `/stage/` too.
+
 ## Home page structure
 
 - `index.html` — hero (panning mountains, 3D dragon, socials), ribbon manifesto, featured sites, toolkit, about teaser, labs, footer
