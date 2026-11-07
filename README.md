@@ -21,7 +21,7 @@ One Pages site, two channels, built by `.github/workflows/pages.yml`:
 | `main` | https://tommykho.github.io/ | production |
 | `stage` | https://tommykho.github.io/stage/ | beta: `noindex`, STAGE badge |
 
-A push to either branch rebuilds both. Merge `stage` into `main` to promote. Keep the workflow file the same on both branches. Link to sister sites with root paths (`/about/`, `/suntze/`) so links work from `/stage/` too.
+A push to `main` deploys; a push to `stage` triggers `stage-relay.yml`, which re-runs the deploy on `main`. Each deploy rebuilds both channels. Merge `stage` into `main` to promote. Keep the workflow files the same on both branches. Link to sister sites with root paths (`/about/`, `/suntze/`) so links work from `/stage/` too.
 
 ## Home page structure
 

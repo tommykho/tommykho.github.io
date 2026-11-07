@@ -1,0 +1,25 @@
+# A push to stage re-runs the Pages deploy on main (see pages.yml), so the
+# beta at /stage/ updates without allowing stage in the github-pages
+# environment. Dispatches made with GITHUB_TOKEN do start new runs.
+name: Stage → redeploy Pages
+
+on:
+  push:
+    branches: [stage]
+
+permissions:
+  actions: write
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dispatch Pages deploy on main
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh workflow run pages.yml --ref main --repo "$GITHUB_REPOSITORY"; then
+            echo "Dispatched pages.yml on main."
+          else
+            echo "::warning::Could not dispatch pages.yml on main. Merge .github/workflows/pages.yml into main first."
+          fi

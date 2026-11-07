@@ -2,17 +2,18 @@
 #   main  -> https://tommykho.github.io/        (production)
 #   stage -> https://tommykho.github.io/stage/  (beta, noindex)
 #
-# One-time setup:
-#   1. Settings → Pages → Build and deployment → Source: "GitHub Actions".
-#   2. Settings → Environments → github-pages → Deployment branches:
-#      allow both "main" and "stage".
-# Keep this file identical on main and stage: a push to either branch runs
-# that branch's copy, and every run rebuilds both channels.
+# Every deploy runs from main, so the default github-pages environment rule
+# ("only main may deploy") is satisfied. A push to stage triggers
+# stage-relay.yml, which dispatches this workflow on main. Each run rebuilds
+# both channels from the current main and stage branches.
+#
+# One-time setup: Settings → Pages → Build and deployment → Source:
+# "GitHub Actions".
 name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main, stage]
+    branches: [main]
   workflow_dispatch:
 
 permissions:
