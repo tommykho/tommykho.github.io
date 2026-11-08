@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About · Tommy Ho</title>
+  <meta name="description" content="About Tommy Ho — manufacturing engineer, creator and builder of Sun Tzu · Modern Field Manual, Five Rings and Hopbit." />
+  <meta name="theme-color" content="#0c1524" />
+  <meta property="og:title" content="About · Tommy Ho" />
+  <meta property="og:url" content="https://tommykho.github.io/about/" />
+  <link rel="icon" href="../assets/images/hopbit-diecut.svg" type="image/svg+xml" />
+  <script>
+    try { var t = localStorage.getItem('th-theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;700&family=Shippori+Mincho+B1:wght@600;800&display=swap" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="../assets/css/about.css" />
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="sheet-grid" aria-hidden="true"></div>
+  <p class="coords" id="coords" aria-hidden="true">X <span>0000.0</span> Y <span>0000.0</span></p>
+
+  <!-- ============ Top bar (shared with home) ============ -->
+  <header class="topbar" id="topbar">
+    <a class="brand" href="../" aria-label="Tommy Ho — home">
+      <span class="brand-mark">TH</span><span class="brand-name">Tommy Ho</span>
+    </a>
+    <nav class="topnav" aria-label="Sites">
+      <a href="./" aria-current="page">About</a>
+      <a href="/suntze/" class="t-suntze">Sun Tzu</a>
+      <a href="/fiverings/" class="t-fiverings">Five Rings</a>
+      <a href="/hopbit/" class="t-hopbit">Hopbit</a>
+    </nav>
+    <button class="theme-btn" id="theme-toggle" type="button" aria-label="Switch between blueprint and paper themes">
+      <i class="fa-solid fa-moon"></i><i class="fa-solid fa-sun"></i>
+    </button>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ Sheet 1 · General assembly (hero) ============ -->
+    <section class="hero wrap" aria-labelledby="name">
+      <div class="hero-title">
+        <p class="dwg-line load" style="--d:.05s"><span>DWG NO. TH-0001</span><span>REV 2026</span><span>SHEET 1 OF 6</span></p>
+        <h1 class="hero-name" id="name">
+          <span class="mask"><span style="--d:.15s">Tommy</span></span>
+          <span class="mask"><span style="--d:.27s"><em>Ho</em><b class="dot">.</b></span></span>
+        </h1>
+      </div>
+
+      <div class="hero-copy">
+        <p class="hero-sub load" style="--d:.5s">General assembly: <strong>engineer &amp; builder</strong></p>
+        <p class="hero-bio load" style="--d:.6s">I build things that live on the internet and tinker with ideas that bridge the physical and digital world — from CAD and shop-floor tools to ESP32 gadgets and AI-assisted field manuals.</p>
+        <div class="hero-cta load" style="--d:.7s">
+          <a class="btn btn-solid" href="#assemblies">See the builds <i class="fa-solid fa-arrow-down"></i></a>
+          <a class="btn btn-ghost" href="#rfq">Get in touch</a>
+        </div>
+
+        <dl class="title-block load" style="--d:.85s" aria-label="Title block">
+          <div><dt>Drawn by</dt><dd>Tommy Ho</dd></div>
+          <div><dt>Discipline</dt><dd>Manufacturing eng.</dd></div>
+          <div><dt>Scale</dt><dd>1 : 1</dd></div>
+          <div><dt>Material</dt><dd>Curiosity, tea</dd></div>
+          <div><dt>Location</dt><dd>USA</dd></div>
+          <div><dt>Status</dt><dd class="status"><i></i>Released · iterating</dd></div>
+        </dl>
+      </div>
+
+      <figure class="drawing load" style="--d:.3s">
+        <div class="frame">
+          <svg class="frame-line" viewBox="0 0 100 150" preserveAspectRatio="none" aria-hidden="true"><rect x=".5" y=".5" width="99" height="149" pathLength="1" /></svg>
+          <span class="crop tl"></span><span class="crop tr"></span><span class="crop bl"></span><span class="crop br"></span>
+          <picture>
+            <source srcset="../assets/images/profile.webp" type="image/webp" />
+            <img src="../assets/images/profile.jpg" alt="Illustrated portrait of Tommy Ho at a workbench with a CAD laptop, schematics, machinery, a hard hat, a mug and calipers" width="768" height="1152" />
+          </picture>
+          <div class="dim-v" aria-hidden="true"><span>Engineer &amp; builder</span></div>
+          <button class="balloon" style="--x:14%;--y:31%;--n:0" data-n="1" aria-label="Callout 1: document and plan">1</button>
+          <button class="balloon" style="--x:13%;--y:58%;--n:1" data-n="2" aria-label="Callout 2: simulate and understand">2</button>
+          <button class="balloon" style="--x:86%;--y:34%;--n:2" data-n="3" aria-label="Callout 3: prototype and test">3</button>
+          <button class="balloon" style="--x:90%;--y:59%;--n:3" data-n="4" aria-label="Callout 4: safety first">4</button>
+          <button class="balloon" style="--x:91%;--y:75%;--n:4" data-n="5" aria-label="Callout 5: well-being next">5</button>
+          <button class="balloon" style="--x:84%;--y:92%;--n:5" data-n="6" aria-label="Callout 6: measure twice, do once">6</button>
+        </div>
+        <figcaption>
+          <ol class="legend">
+            <li data-n="1"><b>1</b>Document and plan</li>
+            <li data-n="2"><b>2</b>Simulate and understand</li>
+            <li data-n="3"><b>3</b>Prototype and test</li>
+            <li data-n="4"><b>4</b>Safety first</li>
+            <li data-n="5"><b>5</b>Well-being next</li>
+            <li data-n="6"><b>6</b>Measure twice, do once</li>
+          </ol>
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- ============ Sheet 2 · Specifications ============ -->
+    <section class="sheet wrap" id="specs" aria-labelledby="specs-title">
+      <header class="sheet-head" data-reveal>
+        <p class="sheet-no">Sheet 2 / 6</p>
+        <h2 id="specs-title" class="sheet-title">Specifications</h2>
+        <p class="sheet-lede">From software to hardware and everything in between. This site is my playground for experiments and the projects I find interesting.</p>
+      </header>
+      <dl class="spec">
+        <div data-reveal><dt>Discipline</dt><dd>Manufacturing engineering — mechanical design, systems thinking, problem solving</dd></div>
+        <div data-reveal><dt>Builds</dt><dd>Web apps, shop-floor tools, ESP32 gadgets, AI-assisted field manuals</dd></div>
+        <div data-reveal><dt>Scripting</dt><dd><span class="chip">Excel</span><span class="chip">SQL</span><span class="chip">PowerShell</span><span class="chip">Batch</span><span class="chip">Python</span><span class="chip">HTML / CSS / JS</span></dd></div>
+        <div data-reveal><dt>Hardware</dt><dd><span class="chip">ESP32</span><span class="chip">ESP8266</span><span class="chip">ATmega32u4</span><span class="chip">CYD</span></dd></div>
+        <div data-reveal><dt>Platforms</dt><dd><span class="chip">Dynamics 365</span><span class="chip">CAD</span><span class="chip">glTF / AR</span><span class="chip">Claude Code</span></dd></div>
+        <div data-reveal><dt>Channels</dt><dd><a href="https://www.youtube.com/c/tommyhosf">YouTube @tommyhosf</a> · <a href="https://instagram.com/tommykho">Instagram @tommykho</a></dd></div>
+      </dl>
+    </section>
+
+    <!-- ============ Sheet 3 · Bill of materials (skills) ============ -->
+    <section class="sheet wrap" id="bom" aria-labelledby="bom-title">
+      <header class="sheet-head" data-reveal>
+        <p class="sheet-no">Sheet 3 / 6</p>
+        <h2 id="bom-title" class="sheet-title">Bill of materials</h2>
+      </header>
+      <div class="bom" role="table" aria-label="Skills">
+        <div class="bom-row bom-head" role="row"><span role="columnheader">Item</span><span role="columnheader">Part</span><span role="columnheader">Description</span><span role="columnheader">Qty</span></div>
+        <div class="bom-row" role="row" data-reveal><span role="cell">01</span><span role="cell">Development</span><span role="cell">Full-stack web development, scripting and automation</span><span role="cell">1 lot</span></div>
+        <div class="bom-row" role="row" data-reveal><span role="cell">02</span><span role="cell">Engineering</span><span role="cell">Mechanical design, manufacturing systems, problem solving</span><span role="cell">1 lot</span></div>
+        <div class="bom-row" role="row" data-reveal><span role="cell">03</span><span role="cell">Prototyping</span><span role="cell">Rapid prototyping, CAD, 3D models and microcontrollers</span><span role="cell">1 lot</span></div>
+        <div class="bom-row" role="row" data-reveal><span role="cell">04</span><span role="cell">Teaching</span><span role="cell">Hopbit — one small tech skill a day, on YouTube</span><span role="cell">daily</span></div>
+      </div>
+    </section>
+
+    <!-- ============ Sheet 4 · Assemblies (now building) ============ -->
+    <section class="sheet wrap" id="assemblies" aria-labelledby="asm-title">
+      <header class="sheet-head" data-reveal>
+        <p class="sheet-no">Sheet 4 / 6</p>
+        <h2 id="asm-title" class="sheet-title">Assemblies <em>now building</em></h2>
+        <p class="sheet-lede">Three field manuals: each turns a book into tactics you can use today, with a cited AI advisor, a skill test and a 30-second podcast. $0 to run.</p>
+      </header>
+      <div class="asm">
+        <a class="asm-card a-suntze" href="/suntze/" data-reveal>
+          <span class="asm-no">ASM-01</span>
+          <div class="asm-art" aria-hidden="true"><span class="glyph">兵</span><span class="seal">孫子</span></div>
+          <h3>Sun Tzu</h3>
+          <p>The Art of War, for the battles you actually fight.</p>
+          <p class="asm-meta">13 chapters · 383 verses · 52 tactics</p>
+          <span class="asm-go">Open <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+        <a class="asm-card a-fiverings" href="/fiverings/" data-reveal>
+          <span class="asm-no">ASM-02</span>
+          <div class="asm-art" aria-hidden="true">
+            <div class="enso-wrap">
+              <svg class="enso" viewBox="0 0 64 64">
+                <!-- tapered brush shape (thick start, half width at the tail), revealed along the centreline -->
+                <defs><mask id="enso-reveal" maskUnits="userSpaceOnUse" x="-8" y="-8" width="80" height="80"><path class="enso-trace" d="M41 9.5C30 5.5 15 10 10.5 23c-4.6 13.3 3.6 28 17.4 31 13.6 3 25.6-5.8 27-19 .9-8.4-2.7-15.6-8.6-20.2" pathLength="1" /></mask></defs>
+                <path class="enso-ink" mask="url(#enso-reveal)" d="M41.95 6.87L40.91 6.53 39.84 6.24 38.77 5.99 37.7 5.78 36.62 5.62 35.53 5.51 34.45 5.43 33.36 5.4 32.28 5.41 31.19 5.46 30.12 5.55 29.04 5.68 27.97 5.86 26.91 6.07 25.86 6.32 24.82 6.61 23.79 6.95 22.77 7.32 21.77 7.73 20.78 8.19 19.81 8.68 18.86 9.22 17.94 9.79 17.03 10.41 16.16 11.06 15.31 11.75 14.5 12.48 13.71 13.25 12.97 14.05 12.26 14.89 11.59 15.76 10.97 16.66 10.38 17.59 9.84 18.54 9.35 19.52 8.91 20.52 8.5 21.53 8.15 22.56 7.84 23.59 7.58 24.64 7.36 25.7 7.18 26.76 7.05 27.84 6.97 28.91 6.93 29.99 6.93 31.07 6.98 32.15 7.08 33.22 7.22 34.29 7.4 35.35 7.63 36.4 7.9 37.43 8.21 38.46 8.56 39.47 8.96 40.47 9.39 41.45 9.86 42.41 10.37 43.35 10.92 44.27 11.5 45.17 12.12 46.04 12.77 46.88 13.46 47.7 14.18 48.49 14.93 49.25 15.71 49.98 16.52 50.67 17.36 51.33 18.23 51.96 19.12 52.55 20.04 53.1 20.97 53.61 21.93 54.08 22.91 54.51 23.9 54.9 24.91 55.25 25.93 55.55 26.97 55.81 28 56.03 29.04 56.21 30.09 56.34 31.15 56.44 32.21 56.49 33.27 56.5 34.33 56.47 35.39 56.39 36.45 56.27 37.5 56.09 38.54 55.88 39.57 55.61 40.59 55.3 41.6 54.95 42.59 54.55 43.55 54.1 44.5 53.62 45.42 53.08 46.32 52.51 47.19 51.9 48.03 51.24 48.84 50.55 49.62 49.82 50.36 49.06 51.06 48.26 51.73 47.44 52.36 46.58 52.94 45.7 53.49 44.79 53.99 43.86 54.45 42.9 54.87 41.93 55.24 40.94 55.57 39.94 55.85 38.92 56.09 37.9 56.28 36.86 56.43 35.82 56.54 34.78 56.6 33.74 56.63 32.69 56.61 31.64 56.54 30.59 56.43 29.55 56.27 28.51 56.06 27.48 55.81 26.45 55.52 25.44 55.18 24.45 54.79 23.47 54.36 22.52 53.89 21.58 53.37 20.66 52.82 19.77 52.23 18.91 51.6 18.07 50.94 17.27 50.24 16.49 49.52 15.74 48.76 15.03 47.97 14.34 47.16 13.7A1.4 1.4 0 0 0 45.44 15.9L46.15 16.49 46.84 17.11 47.5 17.76 48.13 18.43 48.73 19.13 49.3 19.85 49.84 20.59 50.34 21.36 50.81 22.15 51.24 22.96 51.64 23.78 52 24.62 52.32 25.48 52.6 26.35 52.84 27.23 53.04 28.12 53.2 29.02 53.32 29.92 53.4 30.83 53.44 31.74 53.45 32.66 53.41 33.57 53.33 34.49 53.22 35.4 53.08 36.3 52.89 37.2 52.67 38.08 52.41 38.95 52.11 39.81 51.77 40.66 51.4 41.48 50.99 42.29 50.55 43.08 50.07 43.85 49.55 44.59 49.01 45.31 48.43 46 47.82 46.66 47.18 47.3 46.51 47.9 45.81 48.47 45.09 49.01 44.35 49.52 43.58 49.99 42.79 50.42 41.99 50.82 41.16 51.17 40.32 51.5 39.47 51.78 38.61 52.02 37.73 52.23 36.85 52.39 35.96 52.52 35.06 52.61 34.16 52.66 33.26 52.67 32.36 52.65 31.46 52.58 30.56 52.48 29.66 52.35 28.77 52.18 27.88 51.97 27.02 51.74 26.16 51.46 25.32 51.16 24.49 50.81 23.67 50.43 22.88 50.02 22.1 49.58 21.34 49.1 20.6 48.59 19.89 48.05 19.19 47.48 18.52 46.89 17.88 46.26 17.26 45.61 16.67 44.94 16.11 44.24 15.58 43.52 15.07 42.78 14.6 42.02 14.16 41.24 13.75 40.45 13.37 39.64 13.02 38.81 12.71 37.98 12.44 37.13 12.2 36.27 11.99 35.4 11.82 34.53 11.69 33.65 11.59 32.77 11.53 31.88 11.5 30.99 11.52 30.11 11.57 29.22 11.66 28.34 11.78 27.47 11.94 26.6 12.14 25.74 12.38 24.88 12.65 24.04 12.95 23.22 13.29 22.41 13.66 21.62 14.07 20.85 14.51 20.11 14.99 19.38 15.5 18.68 16.05 18 16.62 17.35 17.23 16.73 17.86 16.14 18.52 15.57 19.2 15.03 19.91 14.53 20.65 14.05 21.4 13.61 22.17 13.19 22.96 12.81 23.77 12.46 24.59 12.15 25.42 11.86 26.27 11.61 27.12 11.39 27.99 11.21 28.85 11.05 29.73 10.93 30.61 10.85 31.49 10.79 32.37 10.77 33.25 10.79 34.12 10.83 35 10.92 35.86 11.03 36.72 11.18 37.57 11.37 38.41 11.59 39.23 11.84 40.05 12.13A2.8 2.8 0 0 0 41.95 6.87Z" />
+              </svg>
+              <span class="ring-title" lang="ja">五輪書</span>
+            </div>
+            <span class="els"><b style="color:#c29a5b">地</b><b style="color:#5b93c7">水</b><b style="color:#e2583a">火</b><b style="color:#8fb0a0">風</b><b style="color:#d8d2c4">空</b></span>
+          </div>
+          <h3>Five Rings</h3>
+          <p>Musashi’s strategy, for the duels you actually face.</p>
+          <p class="asm-meta">5 scrolls · 89 sections · 45 tactics</p>
+          <span class="asm-go">Open <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+        <a class="asm-card a-hopbit" href="/hopbit/" data-reveal>
+          <span class="asm-no">ASM-03</span>
+          <div class="asm-art" aria-hidden="true"><img src="../assets/images/hopbit-diecut.svg" alt="" /></div>
+          <h3>Hopbit</h3>
+          <p>Micro incremental habits. Hop one small step a day.</p>
+          <p class="asm-meta">20 chapters · 100 ideas · 60 tactics</p>
+          <span class="asm-go">Open <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============ Sheet 5 · Sub-assemblies (playground) ============ -->
+    <section class="sheet wrap" id="playground" aria-labelledby="pg-title">
+      <header class="sheet-head" data-reveal>
+        <p class="sheet-no">Sheet 5 / 6</p>
+        <h2 id="pg-title" class="sheet-title">Sub-assemblies <em>from the playground</em></h2>
+      </header>
+      <ul class="parts">
+        <li data-reveal><a href="https://github.com/tommykho/edgetts"><span class="pn">P-101</span><h3>Edge TTS</h3><p>Windows app for Microsoft Edge’s 400+ neural voices. Preview and export to MP3 — no Python required.</p><span class="tags"><b>Python</b><b>TTS</b><b>Windows</b></span><i class="fa-solid fa-arrow-up-right go"></i></a></li>
+        <li data-reveal><a href="https://github.com/tommykho/IOT-cookbook"><span class="pn">P-102</span><h3>IoT Cookbook</h3><p>Cut-and-paste Arduino C++ and MicroPython for ESP32, ESP8266 and ATmega32u4 — GIF players, internet radios, animated eyes.</p><span class="tags"><b>Arduino</b><b>ESP32</b><b>IoT</b></span><i class="fa-solid fa-arrow-up-right go"></i></a></li>
+        <li data-reveal><a href="../model-viewer.html"><span class="pn">P-103</span><h3>3D Model Viewer</h3><p>A gallery of glTF models — rotate, zoom and view them in AR on your phone.</p><span class="tags"><b>model-viewer</b><b>WebXR</b></span><i class="fa-solid fa-arrow-up-right go"></i></a></li>
+        <li data-reveal><a href="../D365/"><span class="pn">P-104</span><h3>D365 Shop-floor Demos</h3><p>Scan, compare and 3D part viewers prototyped for manufacturing work.</p><span class="tags"><b>D365</b><b>3D</b></span><i class="fa-solid fa-arrow-up-right go"></i></a></li>
+        <li data-reveal><a href="https://github.com/tommykho/tommykho.github.io"><span class="pn">P-105</span><h3>This site</h3><p>Static HTML, CSS and a little JavaScript, deployed with GitHub Actions.</p><span class="tags"><b>HTML</b><b>CSS</b><b>JS</b></span><i class="fa-solid fa-arrow-up-right go"></i></a></li>
+      </ul>
+    </section>
+
+    <!-- ============ Sheet 6 · General notes + RFQ ============ -->
+    <section class="sheet wrap notes-sheet" id="notes" aria-labelledby="notes-title">
+      <header class="sheet-head" data-reveal>
+        <p class="sheet-no">Sheet 6 / 6</p>
+        <h2 id="notes-title" class="sheet-title">General notes</h2>
+      </header>
+      <div class="notes-wrap">
+        <ol class="notes">
+          <li data-reveal>Fueled by tea and curiosity.</li>
+          <li data-reveal>Engineer by trade, builder by habit.</li>
+          <li data-reveal>Learns one new skill a day, and shares it as Hopbit.</li>
+          <li data-reveal>Reads old strategy (Sun Tzu, Musashi) for modern problems.</li>
+          <li data-reveal>Turns repetitive work into scripts: Excel, SQL, PowerShell, Python.</li>
+          <li data-reveal>Tinkers with ESP32 boards and 3D models after hours.</li>
+          <li data-reveal>Open source by default: most work is public.</li>
+          <li data-reveal>Based in the USA. Builds wherever there’s Wi-Fi.</li>
+          <li data-reveal>Unless otherwise specified, live life to the fullest.</li>
+        </ol>
+        <div class="stamp" data-reveal aria-hidden="true"><span>Approved</span><small>T. Ho · 2026</small></div>
+      </div>
+    </section>
+
+    <section class="rfq" id="rfq" aria-labelledby="rfq-title">
+      <div class="wrap rfq-inner" data-reveal>
+        <p class="sheet-no">Request for quote</p>
+        <h2 id="rfq-title" class="rfq-title">Let’s <em>build</em> something.</h2>
+        <p class="sheet-lede">Have a question or want to work together? Feel free to reach out.</p>
+        <a href="mailto:tommyho510@gmail.com" class="btn btn-solid btn-lg">Say hello <i class="fa-solid fa-arrow-right"></i></a>
+        <ul class="socials" aria-label="Social links">
+          <li><a href="https://github.com/tommykho" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
+          <li><a href="https://linkedin.com/in/tommyho510" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+          <li><a href="https://www.youtube.com/c/tommyhosf" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></li>
+          <li><a href="https://instagram.com/tommykho" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href="https://codepen.io/tommyho" aria-label="CodePen"><i class="fa-brands fa-codepen"></i></a></li>
+          <li><a href="mailto:tommyho510@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer wrap">
+    <span>&copy; <span id="year">2026</span> Tommy Ho · TH-0001 Rev 2026</span>
+    <nav aria-label="Footer"><a href="../">Home</a><a href="/suntze/">Sun Tzu</a><a href="/fiverings/">Five Rings</a><a href="/hopbit/">Hopbit</a></nav>
+  </footer>
+
+  <script src="../assets/js/about.js" defer></script>
+</body>
+
+</html>

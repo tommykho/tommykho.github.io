@@ -1,0 +1,75 @@
+# Deploy GitHub Pages with two channels from one site:
+#   main  -> https://tommykho.github.io/        (production)
+#   stage -> https://tommykho.github.io/stage/  (beta, noindex)
+#
+# A push to either branch runs this workflow, and every run rebuilds both
+# channels from the current main and stage branches.
+#
+# One-time setup:
+#   1. Settings → Pages → Build and deployment → Source: "GitHub Actions".
+#   2. Settings → Environments → github-pages → Deployment branches:
+#      allow "main" and "stage".
+# Keep this file identical on main and stage.
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main, stage]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout production (main)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: _site
+
+      - name: Checkout beta (stage)
+        id: stage
+        continue-on-error: true
+        uses: actions/checkout@v4
+        with:
+          ref: stage
+          path: _stage
+
+      - name: Assemble site
+        run: |
+          rm -rf _site/.git _site/.github
+          if [ "${{ steps.stage.outcome }}" = "success" ]; then
+            rm -rf _stage/.git _stage/.github _site/stage
+            mv _stage _site/stage
+            # Keep beta out of search results and mark it visibly.
+            find _site/stage -name '*.html' -print0 | xargs -0 -r perl -0pi -e '
+              s{<head(\s[^>]*)?>}{$&\n  <meta name="robots" content="noindex, nofollow" />}i;
+              s{</body>}{<div style="position:fixed;left:12px;bottom:12px;z-index:9999;padding:4px 10px;border-radius:999px;background:#ffcf5a;color:#15130e;font:600 12px/1.6 ui-monospace,monospace;letter-spacing:.08em;pointer-events:none">STAGE</div>\n</body>}i;
+            '
+          else
+            echo "::warning::No stage branch found; publishing production only."
+          fi
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

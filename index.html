@@ -1,1181 +1,376 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <title>tommykho.github.io - My GitHub Landing Page</title>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <link rel="stylesheet" href="assets/css/main.css" />
-  <style>
-    @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:300,900&family=Open+Sans&family=Roboto&display=swap");
-    @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
-	
-    html, body, div, span, applet, object,
-	iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
-	pre, a, abbr, acronym, address, big, cite,
-	code, del, dfn, em, img, ins, kbd, q, s, samp,
-	small, strike, strong, sub, sup, tt, var, b,
-	u, i, center, dl, dt, dd, ol, ul, li, fieldset,
-	form, label, legend, table, caption, tbody,
-	tfoot, thead, tr, th, td, article, aside,
-	canvas, details, embed, figure, figcaption,
-	footer, header, hgroup, menu, nav, output, ruby,
-	section, summary, time, mark, audio, video {
-      margin: 0;
-      padding: 0;
-      border: 0;
-      font-size: 100%;
-      font: inherit;
-      vertical-align: baseline;
-    }
-
-    article, aside, details, figcaption, figure,
-	footer, header, hgroup, menu, nav, section {
-      display: block;
-    }
-
-    body {
-      line-height: 1;
-    }
-
-    ol, ul {
-      list-style: none;
-    }
-
-    blockquote, q {
-      quotes: none;
-    }
-
-    blockquote:before, blockquote:after, q:before, q:after {
-      content: "";
-      content: none;
-    }
-
-    table {
-      border-collapse: collapse;
-      border-spacing: 0;
-    }
-
-    body {
-      -webkit-text-size-adjust: none;
-    }
-
-    mark {
-      background-color: transparent;
-      color: inherit;
-    }
-
-    input::-moz-focus-inner {
-      border: 0;
-      padding: 0;
-    }
-
-    input, select, textarea {
-      -moz-appearance: none;
-      -webkit-appearance: none;
-      -ms-appearance: none;
-      appearance: none;
-    }
-
-    /* Basic */
-    html {
-      box-sizing: border-box;
-    }
-
-    *,
-    *:before,
-    *:after {
-      box-sizing: inherit;
-    }
-
-    body {
-      background: #fff;
-      overflow: hidden;
-    }
-
-    body.is-preload *,
-    body.is-preload *:before,
-    body.is-preload *:after {
-      -moz-animation: none !important;
-      -webkit-animation: none !important;
-      -ms-animation: none !important;
-      animation: none !important;
-      -moz-transition: none !important;
-      -webkit-transition: none !important;
-      -ms-transition: none !important;
-      transition: none !important;
-    }
-
-    body, input, select, textarea {
-      color: #fff;
-      font-family: "Roboto", sans-serif;
-      font-size: 15pt;
-      font-weight: 200 !important;
-      letter-spacing: -0.025em;
-      line-height: 1.75em;
-    }
-
-    a {
-      -moz-transition: border-color 0.2s ease-in-out;
-      -webkit-transition: border-color 0.2s ease-in-out;
-      -ms-transition: border-color 0.2s ease-in-out;
-      transition: border-color 0.2s ease-in-out;
-      border-bottom: dotted 1px;
-      color: inherit;
-      outline: 0;
-      text-decoration: none;
-    }
-
-    a:hover {
-      border-color: transparent;
-    }
-
-    /* Icon */
-    .icon {
-      text-decoration: none;
-      position: relative;
-    }
-
-    .icon:before {
-      -moz-osx-font-smoothing: grayscale;
-      -webkit-font-smoothing: antialiased;
-      display: inline-block;
-      font-style: normal;
-      font-variant: normal;
-      text-rendering: auto;
-      line-height: 1;
-      text-transform: none !important;
-      font-family: "Font Awesome 5 Free";
-      font-weight: 400;
-    }
-
-    .icon>.label {
-      display: none;
-    }
-
-    .icon.solid:before {
-      font-weight: 900;
-    }
-
-    .icon.brands:before {
-      font-family: "Font Awesome 5 Brands";
-    }
-
-.github {
-  z-index: 10000;
-  top: 10px;
-  right: 10px;
-  position: fixed;
-  border-radius: 5px;
-  padding: 6px 6px 3px 6px;
-  box-shadow: 0.1em 0.1em 0.4em #000;
-  line-height: 1;
-  font-family: system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
-    sans-serif;
-  text-align: center;
-  & a:hover, a:link, a:visited, a:active {
-    color: #000;
-    text-decoration: none;
-  }
-  & img {
-    height: 20px;
-  }
-  & #gh-project {
-    font-size: 20px;
-    padding-left: 5px;
-    font-weight: bold;
-    vertical-align: bottom;
-  }
-}
-
-    /* Wrapper */
-    @-moz-keyframes wrapper {
-      0% {
-        opacity: 0;
-      }
-
-      100% {
-        opacity: 1;
-      }
-    }
-
-    @-webkit-keyframes wrapper {
-      0% {
-        opacity: 0;
-      }
-
-      100% {
-        opacity: 1;
-      }
-    }
-
-    @-ms-keyframes wrapper {
-      0% {
-        opacity: 0;
-      }
-
-      100% {
-        opacity: 1;
-      }
-    }
-
-    @keyframes wrapper {
-      0% {
-        opacity: 0;
-      }
-
-      100% {
-        opacity: 1;
-      }
-    }
-
-    #wrapper {
-      -moz-animation: wrapper 3s forwards;
-      -webkit-animation: wrapper 3s forwards;
-      -ms-animation: wrapper 3s forwards;
-      animation: wrapper 3s forwards;
-      height: 100%;
-      left: 0;
-      opacity: 0;
-      position: fixed;
-      top: 0;
-      width: 100%;
-    }
-
-    /* BG */
-    #bg {
-      -moz-animation: bg 60s linear infinite;
-      -webkit-animation: bg 60s linear infinite;
-      -ms-animation: bg 60s linear infinite;
-      animation: bg 60s linear infinite;
-      -moz-backface-visibility: hidden;
-      -webkit-backface-visibility: hidden;
-      -ms-backface-visibility: hidden;
-      backface-visibility: hidden;
-      -moz-transform: translate3d(0, 0, 0);
-      -webkit-transform: translate3d(0, 0, 0);
-      -ms-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0);
-      /* Set your background with this */
-      background: #348cb2 url("assets/images/bg_mountains.jpg") bottom left;
-      background-repeat: repeat-x;
-      height: 100%;
-      left: 0;
-      opacity: 1;
-      position: fixed;
-      top: 0;
-    }
-
-    @-moz-keyframes bg {
-      0% {
-        -moz-transform: translate3d(0, 0, 0);
-        -webkit-transform: translate3d(0, 0, 0);
-        -ms-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-      }
-
-      100% {
-        -moz-transform: translate3d(-2250px, 0, 0);
-        -webkit-transform: translate3d(-2250px, 0, 0);
-        -ms-transform: translate3d(-2250px, 0, 0);
-        transform: translate3d(-2250px, 0, 0);
-      }
-    }
-
-    @-webkit-keyframes bg {
-      0% {
-        -moz-transform: translate3d(0, 0, 0);
-        -webkit-transform: translate3d(0, 0, 0);
-        -ms-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-      }
-
-      100% {
-        -moz-transform: translate3d(-2250px, 0, 0);
-        -webkit-transform: translate3d(-2250px, 0, 0);
-        -ms-transform: translate3d(-2250px, 0, 0);
-        transform: translate3d(-2250px, 0, 0);
-      }
-    }
-
-    @-ms-keyframes bg {
-      0% {
-        -moz-transform: translate3d(0, 0, 0);
-        -webkit-transform: translate3d(0, 0, 0);
-        -ms-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-      }
-
-      100% {
-        -moz-transform: translate3d(-2250px, 0, 0);
-        -webkit-transform: translate3d(-2250px, 0, 0);
-        -ms-transform: translate3d(-2250px, 0, 0);
-        transform: translate3d(-2250px, 0, 0);
-      }
-    }
-
-    @keyframes bg {
-      0% {
-        -moz-transform: translate3d(0, 0, 0);
-        -webkit-transform: translate3d(0, 0, 0);
-        -ms-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-      }
-
-      100% {
-        -moz-transform: translate3d(-2250px, 0, 0);
-        -webkit-transform: translate3d(-2250px, 0, 0);
-        -ms-transform: translate3d(-2250px, 0, 0);
-        transform: translate3d(-2250px, 0, 0);
-      }
-    }
-
-    #bg {
-      background-size: 2250px auto;
-      width: 6750px;
-    }
-
-    /* Overlay */
-    @-moz-keyframes overlay {
-      0% {
-        opacity: 0;
-      }
-
-      100% {
-        opacity: 1;
-      }
-    }
-
-    @-webkit-keyframes overlay {
-      0% {
-        opacity: 0;
-      }
-
-      100% {
-        opacity: 1;
-      }
-    }
-
-    @-ms-keyframes overlay {
-      0% {
-        opacity: 0;
-      }
-
-      100% {
-        opacity: 1;
-      }
-    }
-
-    @keyframes overlay {
-      0% {
-        opacity: 0;
-      }
-
-      100% {
-        opacity: 1;
-      }
-    }
-
-    #overlay {
-      -moz-animation: overlay 1.5s 1.5s forwards;
-      -webkit-animation: overlay 1.5s 1.5s forwards;
-      -ms-animation: overlay 1.5s 1.5s forwards;
-      animation: overlay 1.5s 1.5s forwards;
-      background-attachment: fixed, fixed;
-      background-image: url("assets/images/overlay-pattern.png"), url("assets/images/overlay.svg");
-      background-position: top left, center center;
-      background-repeat: repeat, no-repeat;
-      background-size: auto, cover;
-      height: 100%;
-      left: 0;
-      opacity: 0;
-      position: fixed;
-      top: 0;
-      width: 100%;
-    }
-
-    /* Main */
-    #main {
-      height: 100%;
-      left: 0;
-      position: fixed;
-      text-align: center;
-      top: 0;
-      width: 100%;
-    }
-
-    #main:before {
-      content: "";
-      display: inline-block;
-      height: 100%;
-      margin-right: 0;
-      vertical-align: middle;
-      width: 1px;
-    }
-
-    /* Header */
-    @-moz-keyframes header {
-      0% {
-        -moz-transform: translate3d(0, 1em, 0);
-        -webkit-transform: translate3d(0, 1em, 0);
-        -ms-transform: translate3d(0, 1em, 0);
-        transform: translate3d(0, 1em, 0);
-        opacity: 0;
-      }
-
-      100% {
-        -moz-transform: translate3d(0, 0, 0);
-        -webkit-transform: translate3d(0, 0, 0);
-        -ms-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-        opacity: 1;
-      }
-    }
-
-    @-webkit-keyframes header {
-      0% {
-        -moz-transform: translate3d(0, 1em, 0);
-        -webkit-transform: translate3d(0, 1em, 0);
-        -ms-transform: translate3d(0, 1em, 0);
-        transform: translate3d(0, 1em, 0);
-        opacity: 0;
-      }
-
-      100% {
-        -moz-transform: translate3d(0, 0, 0);
-        -webkit-transform: translate3d(0, 0, 0);
-        -ms-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-        opacity: 1;
-      }
-    }
-
-    @-ms-keyframes header {
-      0% {
-        -moz-transform: translate3d(0, 1em, 0);
-        -webkit-transform: translate3d(0, 1em, 0);
-        -ms-transform: translate3d(0, 1em, 0);
-        transform: translate3d(0, 1em, 0);
-        opacity: 0;
-      }
-
-      100% {
-        -moz-transform: translate3d(0, 0, 0);
-        -webkit-transform: translate3d(0, 0, 0);
-        -ms-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-        opacity: 1;
-      }
-    }
-
-    @keyframes header {
-      0% {
-        -moz-transform: translate3d(0, 1em, 0);
-        -webkit-transform: translate3d(0, 1em, 0);
-        -ms-transform: translate3d(0, 1em, 0);
-        transform: translate3d(0, 1em, 0);
-        opacity: 0;
-      }
-
-      100% {
-        -moz-transform: translate3d(0, 0, 0);
-        -webkit-transform: translate3d(0, 0, 0);
-        -ms-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-        opacity: 1;
-      }
-    }
-
-    @-moz-keyframes nav-icons {
-      0% {
-        -moz-transform: translate3d(0, 1em, 0);
-        -webkit-transform: translate3d(0, 1em, 0);
-        -ms-transform: translate3d(0, 1em, 0);
-        transform: translate3d(0, 1em, 0);
-        opacity: 0;
-      }
-
-      100% {
-        -moz-transform: translate3d(0, 0, 0);
-        -webkit-transform: translate3d(0, 0, 0);
-        -ms-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-        opacity: 1;
-      }
-    }
-
-    @-webkit-keyframes nav-icons {
-      0% {
-        -moz-transform: translate3d(0, 1em, 0);
-        -webkit-transform: translate3d(0, 1em, 0);
-        -ms-transform: translate3d(0, 1em, 0);
-        transform: translate3d(0, 1em, 0);
-        opacity: 0;
-      }
-
-      100% {
-        -moz-transform: translate3d(0, 0, 0);
-        -webkit-transform: translate3d(0, 0, 0);
-        -ms-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-        opacity: 1;
-      }
-    }
-
-    @-ms-keyframes nav-icons {
-      0% {
-        -moz-transform: translate3d(0, 1em, 0);
-        -webkit-transform: translate3d(0, 1em, 0);
-        -ms-transform: translate3d(0, 1em, 0);
-        transform: translate3d(0, 1em, 0);
-        opacity: 0;
-      }
-
-      100% {
-        -moz-transform: translate3d(0, 0, 0);
-        -webkit-transform: translate3d(0, 0, 0);
-        -ms-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-        opacity: 1;
-      }
-    }
-
-    @keyframes nav-icons {
-      0% {
-        -moz-transform: translate3d(0, 1em, 0);
-        -webkit-transform: translate3d(0, 1em, 0);
-        -ms-transform: translate3d(0, 1em, 0);
-        transform: translate3d(0, 1em, 0);
-        opacity: 0;
-      }
-
-      100% {
-        -moz-transform: translate3d(0, 0, 0);
-        -webkit-transform: translate3d(0, 0, 0);
-        -ms-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-        opacity: 1;
-      }
-    }
-
-    #header {
-      -moz-animation: header 1s 2.25s forwards;
-      -webkit-animation: header 1s 2.25s forwards;
-      -ms-animation: header 1s 2.25s forwards;
-      animation: header 1s 2.25s forwards;
-      -moz-backface-visibility: hidden;
-      -webkit-backface-visibility: hidden;
-      -ms-backface-visibility: hidden;
-      backface-visibility: hidden;
-      -moz-transform: translate3d(0, 0, 0);
-      -webkit-transform: translate3d(0, 0, 0);
-      -ms-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0);
-      cursor: default;
-      display: inline-block;
-      opacity: 0;
-      position: relative;
-      text-align: center;
-      top: -1em;
-      vertical-align: middle;
-      width: 90%;
-    }
-
-    #header h1 {
-      font-size: 4.35em;
-      font-weight: 600;
-      letter-spacing: -0.035em;
-      line-height: 1em;
-    }
-
-    #header p {
-      font-size: 1.25em;
-      margin: 0.75em 0 0.25em 0;
-      opacity: 0.75;
-    }
-
-    #header nav {
-      margin: 1.5em 0 0 0;
-    }
-
-    #header nav li {
-      -moz-animation: nav-icons 0.5s ease-in-out forwards;
-      -webkit-animation: nav-icons 0.5s ease-in-out forwards;
-      -ms-animation: nav-icons 0.5s ease-in-out forwards;
-      animation: nav-icons 0.5s ease-in-out forwards;
-      -moz-backface-visibility: hidden;
-      -webkit-backface-visibility: hidden;
-      -ms-backface-visibility: hidden;
-      backface-visibility: hidden;
-      -moz-transform: translate3d(0, 0, 0);
-      -webkit-transform: translate3d(0, 0, 0);
-      -ms-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0);
-      display: inline-block;
-      height: 5.35em;
-      line-height: 5.885em;
-      opacity: 0;
-      position: relative;
-      top: 0;
-      width: 5.35em;
-    }
-
-    #header nav li:nth-child(1) {
-      -moz-animation-delay: 2.5s;
-      -webkit-animation-delay: 2.5s;
-      -ms-animation-delay: 2.5s;
-      animation-delay: 2.5s;
-    }
-
-    #header nav li:nth-child(2) {
-      -moz-animation-delay: 2.75s;
-      -webkit-animation-delay: 2.75s;
-      -ms-animation-delay: 2.75s;
-      animation-delay: 2.75s;
-    }
-
-    #header nav li:nth-child(3) {
-      -moz-animation-delay: 3s;
-      -webkit-animation-delay: 3s;
-      -ms-animation-delay: 3s;
-      animation-delay: 3s;
-    }
-
-    #header nav li:nth-child(4) {
-      -moz-animation-delay: 3.25s;
-      -webkit-animation-delay: 3.25s;
-      -ms-animation-delay: 3.25s;
-      animation-delay: 3.25s;
-    }
-
-    #header nav li:nth-child(5) {
-      -moz-animation-delay: 3.5s;
-      -webkit-animation-delay: 3.5s;
-      -ms-animation-delay: 3.5s;
-      animation-delay: 3.5s;
-    }
-
-    #header nav li:nth-child(6) {
-      -moz-animation-delay: 3.75s;
-      -webkit-animation-delay: 3.75s;
-      -ms-animation-delay: 3.75s;
-      animation-delay: 3.75s;
-    }
-
-    #header nav li:nth-child(7) {
-      -moz-animation-delay: 4s;
-      -webkit-animation-delay: 4s;
-      -ms-animation-delay: 4s;
-      animation-delay: 4s;
-    }
-
-    #header nav li:nth-child(8) {
-      -moz-animation-delay: 4.25s;
-      -webkit-animation-delay: 4.25s;
-      -ms-animation-delay: 4.25s;
-      animation-delay: 4.25s;
-    }
-
-    #header nav li:nth-child(9) {
-      -moz-animation-delay: 4.5s;
-      -webkit-animation-delay: 4.5s;
-      -ms-animation-delay: 4.5s;
-      animation-delay: 4.5s;
-    }
-
-    #header nav li:nth-child(10) {
-      -moz-animation-delay: 4.75s;
-      -webkit-animation-delay: 4.75s;
-      -ms-animation-delay: 4.75s;
-      animation-delay: 4.75s;
-    }
-
-    #header nav a {
-      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-      -webkit-touch-callout: none;
-      border: 0;
-      display: inline-block;
-    }
-
-    #header nav a:before {
-      -moz-transition: all 0.2s ease-in-out;
-      -webkit-transition: all 0.2s ease-in-out;
-      -ms-transition: all 0.2s ease-in-out;
-      transition: all 0.2s ease-in-out;
-      border-radius: 100%;
-      border: solid 1px #fff;
-      display: block;
-      font-size: 1.75em;
-      height: 2.5em;
-      line-height: 2.5em;
-      position: relative;
-      text-align: center;
-      top: 0;
-      width: 2.5em;
-    }
-
-    #header nav a:hover {
-      font-size: 1.1em;
-    }
-
-    #header nav a:hover:before {
-      background-color: rgba(255, 255, 255, 0.175);
-      color: #fff;
-    }
-
-    #header nav a:active {
-      font-size: 0.95em;
-      background: none;
-    }
-
-    #header nav a:active:before {
-      background-color: rgba(255, 255, 255, 0.35);
-      color: #fff;
-    }
-
-    #header nav a span {
-      display: none;
-    }
-
-    /* Footer */
-    #footer {
-      background-image: -moz-linear-gradient(top,
-          rgba(0, 0, 0, 0),
-          rgba(0, 0, 0, 0.5) 75%);
-      background-image: -webkit-linear-gradient(top,
-          rgba(0, 0, 0, 0),
-          rgba(0, 0, 0, 0.5) 75%);
-      background-image: -ms-linear-gradient(top,
-          rgba(0, 0, 0, 0),
-          rgba(0, 0, 0, 0.5) 75%);
-      background-image: linear-gradient(top,
-          rgba(0, 0, 0, 0),
-          rgba(0, 0, 0, 0.5) 75%);
-      bottom: 0;
-      cursor: default;
-      height: 6em;
-      left: 0;
-      line-height: 8em;
-      position: absolute;
-      text-align: center;
-      width: 100%;
-    }
-
-    /* Wide */
-    @media screen and (max-width: 1680px) {
-
-      /* Basic */
-      body,
-      input,
-      select,
-      textarea {
-        font-size: 13pt;
-      }
-
-      /* BG */
-      @-moz-keyframes bg {
-        0% {
-          -moz-transform: translate3d(0, 0, 0);
-          -webkit-transform: translate3d(0, 0, 0);
-          -ms-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-        }
-
-        100% {
-          -moz-transform: translate3d(-1500px, 0, 0);
-          -webkit-transform: translate3d(-1500px, 0, 0);
-          -ms-transform: translate3d(-1500px, 0, 0);
-          transform: translate3d(-1500px, 0, 0);
-        }
-      }
-
-      @-webkit-keyframes bg {
-        0% {
-          -moz-transform: translate3d(0, 0, 0);
-          -webkit-transform: translate3d(0, 0, 0);
-          -ms-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-        }
-
-        100% {
-          -moz-transform: translate3d(-1500px, 0, 0);
-          -webkit-transform: translate3d(-1500px, 0, 0);
-          -ms-transform: translate3d(-1500px, 0, 0);
-          transform: translate3d(-1500px, 0, 0);
-        }
-      }
-
-      @-ms-keyframes bg {
-        0% {
-          -moz-transform: translate3d(0, 0, 0);
-          -webkit-transform: translate3d(0, 0, 0);
-          -ms-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-        }
-
-        100% {
-          -moz-transform: translate3d(-1500px, 0, 0);
-          -webkit-transform: translate3d(-1500px, 0, 0);
-          -ms-transform: translate3d(-1500px, 0, 0);
-          transform: translate3d(-1500px, 0, 0);
-        }
-      }
-
-      @keyframes bg {
-        0% {
-          -moz-transform: translate3d(0, 0, 0);
-          -webkit-transform: translate3d(0, 0, 0);
-          -ms-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-        }
-
-        100% {
-          -moz-transform: translate3d(-1500px, 0, 0);
-          -webkit-transform: translate3d(-1500px, 0, 0);
-          -ms-transform: translate3d(-1500px, 0, 0);
-          transform: translate3d(-1500px, 0, 0);
-        }
-      }
-
-      #bg {
-        background-size: 1500px auto;
-        width: 4500px;
-      }
-    }
-
-    /* Normal */
-    @media screen and (max-width: 1280px) {
-
-      /* Basic */
-      body,
-      input,
-      select,
-      textarea {
-        font-size: 12pt;
-      }
-
-      /* BG */
-      @-moz-keyframes bg {
-        0% {
-          -moz-transform: translate3d(0, 0, 0);
-          -webkit-transform: translate3d(0, 0, 0);
-          -ms-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-        }
-
-        100% {
-          -moz-transform: translate3d(-750px, 0, 0);
-          -webkit-transform: translate3d(-750px, 0, 0);
-          -ms-transform: translate3d(-750px, 0, 0);
-          transform: translate3d(-750px, 0, 0);
-        }
-      }
-
-      @-webkit-keyframes bg {
-        0% {
-          -moz-transform: translate3d(0, 0, 0);
-          -webkit-transform: translate3d(0, 0, 0);
-          -ms-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-        }
-
-        100% {
-          -moz-transform: translate3d(-750px, 0, 0);
-          -webkit-transform: translate3d(-750px, 0, 0);
-          -ms-transform: translate3d(-750px, 0, 0);
-          transform: translate3d(-750px, 0, 0);
-        }
-      }
-
-      @-ms-keyframes bg {
-        0% {
-          -moz-transform: translate3d(0, 0, 0);
-          -webkit-transform: translate3d(0, 0, 0);
-          -ms-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-        }
-
-        100% {
-          -moz-transform: translate3d(-750px, 0, 0);
-          -webkit-transform: translate3d(-750px, 0, 0);
-          -ms-transform: translate3d(-750px, 0, 0);
-          transform: translate3d(-750px, 0, 0);
-        }
-      }
-
-      @keyframes bg {
-        0% {
-          -moz-transform: translate3d(0, 0, 0);
-          -webkit-transform: translate3d(0, 0, 0);
-          -ms-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-        }
-
-        100% {
-          -moz-transform: translate3d(-750px, 0, 0);
-          -webkit-transform: translate3d(-750px, 0, 0);
-          -ms-transform: translate3d(-750px, 0, 0);
-          transform: translate3d(-750px, 0, 0);
-        }
-      }
-
-      #bg {
-        background-size: 750px auto;
-        width: 2250px;
-      }
-    }
-
-    /* Mobile */
-    @media screen and (max-width: 736px) {
-
-      /* Basic */
-      body {
-        min-width: 320px;
-      }
-
-      body,
-      input,
-      select,
-      textarea {
-        font-size: 11pt;
-      }
-
-      /* BG */
-      @-moz-keyframes bg {
-        0% {
-          -moz-transform: translate3d(0, 0, 0);
-          -webkit-transform: translate3d(0, 0, 0);
-          -ms-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-        }
-
-        100% {
-          -moz-transform: translate3d(-300px, 0, 0);
-          -webkit-transform: translate3d(-300px, 0, 0);
-          -ms-transform: translate3d(-300px, 0, 0);
-          transform: translate3d(-300px, 0, 0);
-        }
-      }
-
-      @-webkit-keyframes bg {
-        0% {
-          -moz-transform: translate3d(0, 0, 0);
-          -webkit-transform: translate3d(0, 0, 0);
-          -ms-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-        }
-
-        100% {
-          -moz-transform: translate3d(-300px, 0, 0);
-          -webkit-transform: translate3d(-300px, 0, 0);
-          -ms-transform: translate3d(-300px, 0, 0);
-          transform: translate3d(-300px, 0, 0);
-        }
-      }
-
-      @-ms-keyframes bg {
-        0% {
-          -moz-transform: translate3d(0, 0, 0);
-          -webkit-transform: translate3d(0, 0, 0);
-          -ms-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-        }
-
-        100% {
-          -moz-transform: translate3d(-300px, 0, 0);
-          -webkit-transform: translate3d(-300px, 0, 0);
-          -ms-transform: translate3d(-300px, 0, 0);
-          transform: translate3d(-300px, 0, 0);
-        }
-      }
-
-      @keyframes bg {
-        0% {
-          -moz-transform: translate3d(0, 0, 0);
-          -webkit-transform: translate3d(0, 0, 0);
-          -ms-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-        }
-
-        100% {
-          -moz-transform: translate3d(-300px, 0, 0);
-          -webkit-transform: translate3d(-300px, 0, 0);
-          -ms-transform: translate3d(-300px, 0, 0);
-          transform: translate3d(-300px, 0, 0);
-        }
-      }
-
-      #bg {
-        background-size: 300px auto;
-        width: 900px;
-      }
-
-      /* Header */
-      #header h1 {
-        font-size: 2.5em;
-      }
-
-      #header p {
-        font-size: 1em;
-      }
-
-      #header nav {
-        font-size: 1em;
-      }
-
-      #header nav a:hover {
-        font-size: 1em;
-      }
-
-      #header nav a:active {
-        font-size: 1em;
-      }
-    }
-
-    /* Mobile (Portrait) */
-    @media screen and (max-width: 480px) {
-
-      /* BG */
-      @-moz-keyframes bg {
-        0% {
-          -moz-transform: translate3d(0, 0, 0);
-          -webkit-transform: translate3d(0, 0, 0);
-          -ms-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-        }
-
-        100% {
-          -moz-transform: translate3d(-412.5px, 0, 0);
-          -webkit-transform: translate3d(-412.5px, 0, 0);
-          -ms-transform: translate3d(-412.5px, 0, 0);
-          transform: translate3d(-412.5px, 0, 0);
-        }
-      }
-
-      @-webkit-keyframes bg {
-        0% {
-          -moz-transform: translate3d(0, 0, 0);
-          -webkit-transform: translate3d(0, 0, 0);
-          -ms-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-        }
-
-        100% {
-          -moz-transform: translate3d(-412.5px, 0, 0);
-          -webkit-transform: translate3d(-412.5px, 0, 0);
-          -ms-transform: translate3d(-412.5px, 0, 0);
-          transform: translate3d(-412.5px, 0, 0);
-        }
-      }
-
-      @-ms-keyframes bg {
-        0% {
-          -moz-transform: translate3d(0, 0, 0);
-          -webkit-transform: translate3d(0, 0, 0);
-          -ms-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-        }
-
-        100% {
-          -moz-transform: translate3d(-412.5px, 0, 0);
-          -webkit-transform: translate3d(-412.5px, 0, 0);
-          -ms-transform: translate3d(-412.5px, 0, 0);
-          transform: translate3d(-412.5px, 0, 0);
-        }
-      }
-
-      @keyframes bg {
-        0% {
-          -moz-transform: translate3d(0, 0, 0);
-          -webkit-transform: translate3d(0, 0, 0);
-          -ms-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-        }
-
-        100% {
-          -moz-transform: translate3d(-412.5px, 0, 0);
-          -webkit-transform: translate3d(-412.5px, 0, 0);
-          -ms-transform: translate3d(-412.5px, 0, 0);
-          transform: translate3d(-412.5px, 0, 0);
-        }
-      }
-
-      #bg {
-        background-size: 412.5px auto;
-        width: 1237.5px;
-      }
-
-      /* Header */
-      #header nav {
-        padding: 0 1em;
-      }
-    }
-    model-viewer {
-      width: 500px;
-      height: 300px;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tommy Ho · Engineer, Creator, Builder</title>
+  <meta name="description" content="Tommy Ho — manufacturing engineer and creator. Home of Sun Tzu · Modern Field Manual, Five Rings, and Hopbit: old strategy and tiny habits rebuilt as modern, AI-assisted field manuals." />
+  <meta name="theme-color" content="#0b0c0f" />
+  <script>
+    try { var t = localStorage.getItem('th-theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+  <meta property="og:title" content="Tommy Ho · Engineer, Creator, Builder" />
+  <meta property="og:description" content="Sun Tzu, Five Rings and Hopbit — field manuals for modern life." />
+  <meta property="og:url" content="https://tommykho.github.io/" />
+  <link rel="icon" href="assets/images/hopbit-diecut.svg" type="image/svg+xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Fredoka:wght@600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Shippori+Mincho+B1:wght@600;800&display=swap" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/home.css" />
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
 </head>
 
 <body class="is-preload">
-  <div id="wrapper">
-    <div id="bg"></div>
-    <div id="overlay"></div>
-    <div id="main">
+  <a class="skip" href="#work">Skip to content</a>
 
-      <!-- Header -->
-      <header id="header">
-        <h1>Tommy Ho</h1>
-        <p>Manufacturing Engineer&nbsp;&bull;&nbsp; Creator &nbsp;&bull;&nbsp; Live life to the fullest</p>
-	<div style="position: absolute; text-align: center; left: 50%; transform: translateX(-50%);"><script type="module" src=https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js></script>
-  		<model-viewer camera-controls touch-action="pan-y" src="https://tommykho.github.io/assets/models/Dragon_Statue.glb"
-			ar ar-modes="webxr scene-viewer quick-look" camera-controls shadow-intensity="1.29" exposure="0.4" shadow-softness="0.85" style="background-color: unset;" auto-rotate></model-viewer>
-	</div>
-        <nav>
-          <ul>
-            <li><a href="https://linkedin.com/in/tommyho510" class="icon brands fa-linkedin"><span class="label">Linked In</span></a></li>
-            <li><a href="https://beacons.ai/tommyho#email" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-            <li><a href="https://instagram.com/tommykho" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-            <li><a href="https://www.facebook.com/tommyho" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-            <li><a href="https://www.youtube.com/c/tommyhosf" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
-            <li><a href="./D365" class="icon brands fa-github"><span class="label">Github</span></a></li>
-            <li><a href="https://tommykho.github.io" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-	    <li><a href="./model-viewer.html" class="fa-solid fa-vr-cardboard"><span class="label">3D Models</span></a></li>
-            <li><a href="https://codepen.io/tommyho" class="fa-brands fa-codepen"><span class="label">Codepen</span></a></li>
-          </ul>
-        </nav>
+  <!-- ============ Top nav ============ -->
+  <header class="topbar" id="topbar">
+    <a class="brand" href="#top" aria-label="Tommy Ho — home">
+      <span class="brand-mark">TH</span>
+      <span class="brand-name">Tommy Ho</span>
+    </a>
+    <nav class="topnav" aria-label="Sites">
+      <a href="about/">About</a>
+      <a href="/suntze/" class="t-suntze">Sun Tzu</a>
+      <a href="/fiverings/" class="t-fiverings">Five Rings</a>
+      <a href="/hopbit/" class="t-hopbit">Hopbit</a>
+    </nav>
+    <div class="tb-end">
+      <button class="theme-btn" id="theme-toggle" type="button" aria-label="Switch between dark and light themes">
+        <i class="fa-solid fa-moon"></i><i class="fa-solid fa-sun"></i>
+      </button>
+      <a class="gh-pill" href="https://github.com/tommykho" aria-label="GitHub profile">
+        <i class="fa-brands fa-github"></i><span>tommykho</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ Hero (the original landing page, kept) ============ -->
+    <section class="hero" aria-label="Intro">
+      <div class="hero-bg" aria-hidden="true">
+        <div id="bg"></div>
+        <div id="overlay"></div>
+        <div class="hero-fade"></div>
+      </div>
+
+      <div class="hero-inner">
+        <p class="eyebrow hero-eyebrow">tommykho.github.io</p>
+        <h1 class="hero-name" data-split>Tommy Ho</h1>
+        <p class="hero-sub">Manufacturing Engineer <i>&bull;</i> Creator <i>&bull;</i> Live life to the fullest</p>
+
+        <div class="hero-model">
+          <model-viewer src="assets/models/Dragon_Statue.glb" alt="Rotating 3D dragon statue"
+            camera-controls touch-action="pan-y" auto-rotate ar ar-modes="webxr scene-viewer quick-look"
+            shadow-intensity="1.29" exposure="0.4" shadow-softness="0.85" interaction-prompt="none"></model-viewer>
+        </div>
+
+        <ul class="socials" aria-label="Social links">
+          <li><a href="https://linkedin.com/in/tommyho510" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+          <li><a href="https://beacons.ai/tommyho#email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a></li>
+          <li><a href="https://instagram.com/tommykho" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href="https://www.facebook.com/tommyho" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+          <li><a href="https://www.youtube.com/c/tommyhosf" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></li>
+          <li><a href="https://github.com/tommykho" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
+          <li><a href="model-viewer.html" aria-label="3D models"><i class="fa-solid fa-vr-cardboard"></i></a></li>
+          <li><a href="https://codepen.io/tommyho" aria-label="CodePen"><i class="fa-brands fa-codepen"></i></a></li>
+        </ul>
+
+        <div class="hero-jump" aria-label="Featured sites">
+          <a href="#suntze" class="chip c-suntze"><b>孫</b>Sun Tzu</a>
+          <a href="#fiverings" class="chip c-fiverings"><b>輪</b>Five Rings</a>
+          <a href="#hopbit" class="chip c-hopbit"><img src="assets/images/hopbit-diecut.svg" alt="" />Hopbit</a>
+          <a href="#about" class="chip c-about"><b>TH</b>About</a>
+        </div>
+      </div>
+
+      <a class="scroll-cue" href="#manifesto" aria-label="Scroll to content"><span></span></a>
+    </section>
+
+    <!-- ============ Ribbon manifesto ============ -->
+    <section class="manifesto" id="manifesto" aria-label="Manifesto">
+      <canvas class="ribbon" id="ribbon" aria-hidden="true"></canvas>
+      <div class="manifesto-copy wrap">
+        <p class="eyebrow">What I build</p>
+        <p class="statement" data-words>Old strategy. Tiny habits. Rebuilt as <em>field manuals</em> for the battles, duels and daily hops of modern life.</p>
+      </div>
+    </section>
+
+    <!-- ============ Marquee band ============ -->
+    <div class="band" aria-hidden="true">
+      <div class="band-track">
+        <span class="cjk">孫子兵法</span><i>✦</i><span>Sun Tzu</span><i>✦</i><span class="cjk">五輪書</span><i>✦</i><span>Five Rings</span><i>✦</i><span>Hopbit</span><i>✦</i><span>Next tech, tiny builds, daily wins</span><i>✦</i>
+        <span class="cjk">孫子兵法</span><i>✦</i><span>Sun Tzu</span><i>✦</i><span class="cjk">五輪書</span><i>✦</i><span>Five Rings</span><i>✦</i><span>Hopbit</span><i>✦</i><span>Next tech, tiny builds, daily wins</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- ============ Featured work: stacking panels ============ -->
+    <section class="work wrap" id="work" aria-labelledby="work-title">
+      <header class="sec-head" data-reveal>
+        <p class="eyebrow">Featured · 03 sites</p>
+        <h2 id="work-title" class="sec-title">Three field manuals.<br /><em>One playbook.</em></h2>
+        <p class="sec-lede">Each site turns a book of strategy or habit into tactics you can use today — with a cited AI advisor, a skill test and a 30-second podcast.</p>
       </header>
 
-      <!-- Footer -->
-      <footer id="footer">
-        <span class="copyright">&copy; All rights reserved.</span>
-      </footer>
+      <div class="stack">
 
+        <!-- 01 · Sun Tzu -->
+        <article class="panel p-suntze" id="suntze" style="--i:0">
+          <div class="panel-copy">
+            <p class="panel-idx"><span>01</span> Sun Tzu · Modern Field Manual</p>
+            <h3 class="panel-title"><span class="cjk">孫子兵法</span>The Art of War, for the battles you actually fight.</h3>
+            <p class="panel-desc">Thirteen chapters of Sun Tzu turned into practical tactics for office politics, careers, business and family.</p>
+            <dl class="stats">
+              <div><dt data-count="13">13</dt><dd>chapters</dd></div>
+              <div><dt data-count="383">383</dt><dd>verses</dd></div>
+              <div><dt data-count="52">52</dt><dd>tactics</dd></div>
+            </dl>
+            <ul class="feats">
+              <li>Ink-wash book — English and 原文 side by side</li>
+              <li>Field Challenge — earn 探花, 榜眼, 狀元</li>
+              <li>Ask the General — every verse citation checked</li>
+              <li>30-second podcast, downloadable as MP3</li>
+            </ul>
+            <div class="ctas">
+              <a class="btn btn-solid" href="/suntze/">Enter the field <i class="fa-solid fa-arrow-right"></i></a>
+              <a class="btn btn-ghost" href="https://github.com/tommykho/suntze"><i class="fa-brands fa-github"></i> Source</a>
+            </div>
+          </div>
+          <div class="panel-art art-suntze" aria-hidden="true">
+            <svg class="ink-hills" viewBox="0 0 600 400" preserveAspectRatio="xMidYMax slice">
+              <path class="h1" d="M0 300 C80 220 140 250 200 190 C260 130 320 210 380 170 C440 130 520 200 600 160 L600 400 L0 400Z" />
+              <path class="h2" d="M0 340 C60 300 120 320 180 280 C250 230 300 300 370 260 C430 230 500 290 600 250 L600 400 L0 400Z" />
+              <path class="h3" d="M0 370 C90 340 160 360 240 330 C320 300 390 350 470 320 C530 300 570 330 600 320 L600 400 L0 400Z" />
+            </svg>
+            <span class="brush">兵</span>
+            <span class="vert">孫子兵法 · 始計第一</span>
+            <span class="seal">孫子</span>
+            <blockquote class="verse">“All warfare is based on deception.”<cite>— I.18, Giles 1910</cite></blockquote>
+          </div>
+        </article>
+
+        <!-- 02 · Five Rings -->
+        <article class="panel p-fiverings" id="fiverings" style="--i:1">
+          <div class="panel-copy">
+            <p class="panel-idx"><span>02</span> Five Rings · Modern Field Manual</p>
+            <h3 class="panel-title"><span class="cjk">五輪書</span>Musashi’s strategy, for the duels you actually face.</h3>
+            <p class="panel-desc">Miyamoto Musashi’s <i>Book of Five Rings</i> (1643–45), in the original Japanese with a new English rendering — turned into tactics for work, career, business, family and self.</p>
+            <dl class="stats">
+              <div><dt data-count="5">5</dt><dd>scrolls</dd></div>
+              <div><dt data-count="89">89</dt><dd>sections</dd></div>
+              <div><dt data-count="45">45</dt><dd>tactics</dd></div>
+            </dl>
+            <ul class="feats">
+              <li>地 水 火 風 空 — each scroll in its element colour</li>
+              <li>Dojo Trial — 稽古, 試合, 真剣; rank 入門 → 二天</li>
+              <li>Ask Musashi — section-cited, checked AI advice</li>
+              <li>Furigana toggle and a 30-second podcast</li>
+            </ul>
+            <div class="ctas">
+              <a class="btn btn-solid" href="/fiverings/">Step into the dojo <i class="fa-solid fa-arrow-right"></i></a>
+              <a class="btn btn-ghost" href="https://github.com/tommykho/fiverings"><i class="fa-brands fa-github"></i> Source</a>
+            </div>
+          </div>
+          <div class="panel-art art-fiverings" aria-hidden="true">
+            <div class="ring-stage">
+              <span class="ring-title" lang="ja">五輪書</span>
+              <svg class="enso" viewBox="0 0 64 64">
+                <!-- tapered brush shape (thick start, half width at the tail), revealed along the centreline -->
+                <defs><mask id="enso-reveal" maskUnits="userSpaceOnUse" x="-8" y="-8" width="80" height="80"><path class="enso-trace" d="M41 9.5C30 5.5 15 10 10.5 23c-4.6 13.3 3.6 28 17.4 31 13.6 3 25.6-5.8 27-19 .9-8.4-2.7-15.6-8.6-20.2" pathLength="1" /></mask></defs>
+                <path class="enso-ink" mask="url(#enso-reveal)" d="M41.95 6.87L40.91 6.53 39.84 6.24 38.77 5.99 37.7 5.78 36.62 5.62 35.53 5.51 34.45 5.43 33.36 5.4 32.28 5.41 31.19 5.46 30.12 5.55 29.04 5.68 27.97 5.86 26.91 6.07 25.86 6.32 24.82 6.61 23.79 6.95 22.77 7.32 21.77 7.73 20.78 8.19 19.81 8.68 18.86 9.22 17.94 9.79 17.03 10.41 16.16 11.06 15.31 11.75 14.5 12.48 13.71 13.25 12.97 14.05 12.26 14.89 11.59 15.76 10.97 16.66 10.38 17.59 9.84 18.54 9.35 19.52 8.91 20.52 8.5 21.53 8.15 22.56 7.84 23.59 7.58 24.64 7.36 25.7 7.18 26.76 7.05 27.84 6.97 28.91 6.93 29.99 6.93 31.07 6.98 32.15 7.08 33.22 7.22 34.29 7.4 35.35 7.63 36.4 7.9 37.43 8.21 38.46 8.56 39.47 8.96 40.47 9.39 41.45 9.86 42.41 10.37 43.35 10.92 44.27 11.5 45.17 12.12 46.04 12.77 46.88 13.46 47.7 14.18 48.49 14.93 49.25 15.71 49.98 16.52 50.67 17.36 51.33 18.23 51.96 19.12 52.55 20.04 53.1 20.97 53.61 21.93 54.08 22.91 54.51 23.9 54.9 24.91 55.25 25.93 55.55 26.97 55.81 28 56.03 29.04 56.21 30.09 56.34 31.15 56.44 32.21 56.49 33.27 56.5 34.33 56.47 35.39 56.39 36.45 56.27 37.5 56.09 38.54 55.88 39.57 55.61 40.59 55.3 41.6 54.95 42.59 54.55 43.55 54.1 44.5 53.62 45.42 53.08 46.32 52.51 47.19 51.9 48.03 51.24 48.84 50.55 49.62 49.82 50.36 49.06 51.06 48.26 51.73 47.44 52.36 46.58 52.94 45.7 53.49 44.79 53.99 43.86 54.45 42.9 54.87 41.93 55.24 40.94 55.57 39.94 55.85 38.92 56.09 37.9 56.28 36.86 56.43 35.82 56.54 34.78 56.6 33.74 56.63 32.69 56.61 31.64 56.54 30.59 56.43 29.55 56.27 28.51 56.06 27.48 55.81 26.45 55.52 25.44 55.18 24.45 54.79 23.47 54.36 22.52 53.89 21.58 53.37 20.66 52.82 19.77 52.23 18.91 51.6 18.07 50.94 17.27 50.24 16.49 49.52 15.74 48.76 15.03 47.97 14.34 47.16 13.7A1.4 1.4 0 0 0 45.44 15.9L46.15 16.49 46.84 17.11 47.5 17.76 48.13 18.43 48.73 19.13 49.3 19.85 49.84 20.59 50.34 21.36 50.81 22.15 51.24 22.96 51.64 23.78 52 24.62 52.32 25.48 52.6 26.35 52.84 27.23 53.04 28.12 53.2 29.02 53.32 29.92 53.4 30.83 53.44 31.74 53.45 32.66 53.41 33.57 53.33 34.49 53.22 35.4 53.08 36.3 52.89 37.2 52.67 38.08 52.41 38.95 52.11 39.81 51.77 40.66 51.4 41.48 50.99 42.29 50.55 43.08 50.07 43.85 49.55 44.59 49.01 45.31 48.43 46 47.82 46.66 47.18 47.3 46.51 47.9 45.81 48.47 45.09 49.01 44.35 49.52 43.58 49.99 42.79 50.42 41.99 50.82 41.16 51.17 40.32 51.5 39.47 51.78 38.61 52.02 37.73 52.23 36.85 52.39 35.96 52.52 35.06 52.61 34.16 52.66 33.26 52.67 32.36 52.65 31.46 52.58 30.56 52.48 29.66 52.35 28.77 52.18 27.88 51.97 27.02 51.74 26.16 51.46 25.32 51.16 24.49 50.81 23.67 50.43 22.88 50.02 22.1 49.58 21.34 49.1 20.6 48.59 19.89 48.05 19.19 47.48 18.52 46.89 17.88 46.26 17.26 45.61 16.67 44.94 16.11 44.24 15.58 43.52 15.07 42.78 14.6 42.02 14.16 41.24 13.75 40.45 13.37 39.64 13.02 38.81 12.71 37.98 12.44 37.13 12.2 36.27 11.99 35.4 11.82 34.53 11.69 33.65 11.59 32.77 11.53 31.88 11.5 30.99 11.52 30.11 11.57 29.22 11.66 28.34 11.78 27.47 11.94 26.6 12.14 25.74 12.38 24.88 12.65 24.04 12.95 23.22 13.29 22.41 13.66 21.62 14.07 20.85 14.51 20.11 14.99 19.38 15.5 18.68 16.05 18 16.62 17.35 17.23 16.73 17.86 16.14 18.52 15.57 19.2 15.03 19.91 14.53 20.65 14.05 21.4 13.61 22.17 13.19 22.96 12.81 23.77 12.46 24.59 12.15 25.42 11.86 26.27 11.61 27.12 11.39 27.99 11.21 28.85 11.05 29.73 10.93 30.61 10.85 31.49 10.79 32.37 10.77 33.25 10.79 34.12 10.83 35 10.92 35.86 11.03 36.72 11.18 37.57 11.37 38.41 11.59 39.23 11.84 40.05 12.13A2.8 2.8 0 0 0 41.95 6.87Z" />
+              </svg>
+              <div class="orbit">
+                <span style="--a:0;--c:#c29a5b"><b>地<small>Ground</small></b></span>
+                <span style="--a:1;--c:#5b93c7"><b>水<small>Water</small></b></span>
+                <span style="--a:2;--c:#e2583a"><b>火<small>Fire</small></b></span>
+                <span style="--a:3;--c:#8fb0a0"><b>風<small>Wind</small></b></span>
+                <span style="--a:4;--c:#d8d2c4"><b>空<small>Void</small></b></span>
+              </div>
+            </div>
+            <blockquote class="verse ja">千日の稽古を鍛とし、万日の稽古を練とす<cite>A thousand days to forge; ten thousand to polish.</cite></blockquote>
+          </div>
+        </article>
+
+        <!-- 03 · Hopbit -->
+        <article class="panel p-hopbit" id="hopbit" style="--i:2">
+          <div class="panel-copy">
+            <p class="panel-idx"><span>03</span> Hopbit · Micro incremental habits</p>
+            <h3 class="panel-title"><span class="hop-word">Hopbit</span>Hop one small step a day.</h3>
+            <p class="panel-desc">Twenty chapters of micro-habit ideas turned into tactics for work, business, health and family — in a paper habit-journal design.</p>
+            <dl class="stats">
+              <div><dt data-count="20">20</dt><dd>chapters</dd></div>
+              <div><dt data-count="100">100</dt><dd>key ideas</dd></div>
+              <div><dt data-count="60">60</dt><dd>tactics</dd></div>
+            </dl>
+            <ul class="feats">
+              <li>Habit Challenge — Hop, Skip or Jump</li>
+              <li>Ranks from Kit to Moon Rabbit</li>
+              <li>Ask the Coach — habit loop, system, script</li>
+              <li>Tickable steps, light and night-journal themes</li>
+            </ul>
+            <div class="ctas">
+              <a class="btn btn-solid" href="/hopbit/">Start hopping <i class="fa-solid fa-arrow-right"></i></a>
+              <a class="btn btn-ghost" href="https://github.com/tommykho/hopbit"><i class="fa-brands fa-github"></i> Source</a>
+            </div>
+          </div>
+          <div class="panel-art art-hopbit" aria-hidden="true">
+            <div class="card-journal">
+              <span class="tape"></span>
+              <p class="hand">Day 1 → one tiny win</p>
+              <ol>
+                <li class="done">Cut the noise</li>
+                <li class="done">Start small</li>
+                <li>Win first</li>
+              </ol>
+            </div>
+            <div class="bunny">
+              <span class="spark s1"></span><span class="spark s2"></span><span class="spark s3"></span>
+              <img src="assets/images/hopbit-diecut.svg" alt="" />
+              <span class="shadow"></span>
+            </div>
+            <div class="pillars">
+              <span style="--c:#6CCB5F">Excel</span>
+              <span style="--c:#4FB3F0">Claude Code</span>
+              <span style="--c:#22D8F0">ESP32 / CYD</span>
+              <span style="--c:#FFC93C">One Minute</span>
+              <span style="--c:#F7A8C8">Side Quest</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============ Toolkit bento ============ -->
+    <section class="toolkit wrap" id="toolkit" aria-labelledby="toolkit-title">
+      <header class="sec-head" data-reveal>
+        <p class="eyebrow">Shipped in every manual</p>
+        <h2 id="toolkit-title" class="sec-title">Free to run. <em>Honest by design.</em></h2>
+      </header>
+
+      <div class="bento">
+        <article class="cell cell-chat spot" data-reveal>
+          <p class="cell-tag">Ask the advisor</p>
+          <h3>Plans that cite their source — and get checked.</h3>
+          <div class="chat">
+            <p class="msg me">My manager keeps taking credit for my work.</p>
+            <p class="msg bot">Make your wins visible before the meeting, not after. Send a short weekly note…</p>
+            <div class="cites">
+              <span class="ok">[3.2] exact ✓</span>
+              <span class="near">[6.1] paraphrase ≈</span>
+              <span class="bad">[14.9] invented ✗</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="cell cell-pod spot" data-reveal>
+          <p class="cell-tag">30-second podcast</p>
+          <h3>Your plan, spoken.</h3>
+          <div class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <p class="cell-note">Voiced on-device with Kokoro-82M · download as MP3</p>
+        </article>
+
+        <article class="cell cell-zero spot" data-reveal>
+          <p class="cell-tag">Cost to run</p>
+          <p class="zero">$<span data-count="0">0</span></p>
+          <p class="cell-note">Static sites. AI and voice run on your device or your own key.</p>
+        </article>
+
+        <article class="cell cell-rank spot" data-reveal>
+          <p class="cell-tag">Skill tests</p>
+          <h3>Earn a rank.</h3>
+          <ul class="ladder">
+            <li><b>探花</b><span>→</span><b>榜眼</b><span>→</span><b>狀元</b></li>
+            <li><b>入門</b><span>→</span><b>二天</b></li>
+            <li><b>Kit</b><span>→</span><b>Moon Rabbit</b></li>
+          </ul>
+        </article>
+
+        <article class="cell cell-models spot" data-reveal>
+          <p class="cell-tag">Bring your own model</p>
+          <div class="ticker"><div>
+            <span>Puter.js</span><span>WebLLM</span><span>OpenRouter</span><span>Gemini</span><span>Groq</span><span>Mistral</span><span>Cerebras</span><span>GitHub Models</span><span>NVIDIA NIM</span>
+            <span>Puter.js</span><span>WebLLM</span><span>OpenRouter</span><span>Gemini</span><span>Groq</span><span>Mistral</span><span>Cerebras</span><span>GitHub Models</span><span>NVIDIA NIM</span>
+          </div></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ About teaser ============ -->
+    <section class="about wrap" id="about" aria-labelledby="about-title">
+      <figure class="about-photo" data-reveal>
+        <img src="assets/images/profile.webp" alt="Portrait of Tommy Ho" loading="lazy" width="1024" height="1536" />
+        <figcaption>Engineer &amp; Builder · USA</figcaption>
+      </figure>
+      <div class="about-copy" data-reveal>
+        <p class="eyebrow">About</p>
+        <h2 id="about-title" class="sec-title">I build things that bridge the <em>physical</em> and the <em>digital</em>.</h2>
+        <p class="sec-lede">Manufacturing engineer by day, creator by night. From CAD and shop-floor apps to ESP32 gadgets and AI-assisted field manuals — most of it is open source.</p>
+        <ul class="skills">
+          <li><i class="fa-solid fa-code"></i><b>Development</b><span>Web, scripting, automation</span></li>
+          <li><i class="fa-solid fa-gear"></i><b>Engineering</b><span>Mechanical design, systems</span></li>
+          <li><i class="fa-solid fa-lightbulb"></i><b>Prototyping</b><span>CAD, 3D, rapid builds</span></li>
+        </ul>
+        <a class="btn btn-solid" href="about/">More about me <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </section>
+
+    <!-- ============ Labs gallery ============ -->
+    <section class="labs wrap" id="labs" aria-labelledby="labs-title">
+      <header class="sec-head" data-reveal>
+        <p class="eyebrow">Labs &amp; side quests</p>
+        <h2 id="labs-title" class="sec-title">More from the <em>workbench</em>.</h2>
+      </header>
+      <div class="lab-grid">
+        <a class="lab spot" href="model-viewer.html" data-reveal>
+          <i class="fa-solid fa-cube"></i><h3>3D Model Viewer</h3><p>Dragons, Gundams and burgers — rotate, zoom, view in AR.</p><span class="go">↗</span>
+        </a>
+        <a class="lab spot" href="D365/" data-reveal>
+          <i class="fa-solid fa-industry"></i><h3>D365 Shop-floor Demos</h3><p>Scan, compare and 3D part viewers for manufacturing work.</p><span class="go">↗</span>
+        </a>
+        <a class="lab spot" href="https://github.com/tommykho/edgetts" data-reveal>
+          <i class="fa-solid fa-microphone-lines"></i><h3>Edge TTS</h3><p>Windows app for 400+ neural voices, export to MP3.</p><span class="go">↗</span>
+        </a>
+        <a class="lab spot" href="https://github.com/tommykho/IOT-cookbook" data-reveal>
+          <i class="fa-solid fa-microchip"></i><h3>IoT Cookbook</h3><p>Cut-and-paste ESP32, ESP8266 and Arduino recipes.</p><span class="go">↗</span>
+        </a>
+        <a class="lab spot" href="https://www.youtube.com/c/tommyhosf" data-reveal>
+          <i class="fa-brands fa-youtube"></i><h3>Hopbit on YouTube</h3><p>Excel, Claude Code and ESP32 builds — one small skill a day.</p><span class="go">↗</span>
+        </a>
+        <a class="lab spot" href="https://codepen.io/tommyho" data-reveal>
+          <i class="fa-brands fa-codepen"></i><h3>CodePen</h3><p>Shaders, motion and front-end experiments.</p><span class="go">↗</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ Footer ============ -->
+  <footer class="footer">
+    <div class="wrap footer-top">
+      <div>
+        <p class="eyebrow">Say hello</p>
+        <a class="footer-mail" href="https://beacons.ai/tommyho#email">Let’s build something <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="gh-buttons">
+        <a class="github-button" href="https://github.com/tommykho" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-size="large" aria-label="Follow @tommykho on GitHub">Follow @tommykho</a>
+        <a class="github-button" href="https://github.com/tommykho/tommykho.github.io" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star tommykho.github.io on GitHub">Star</a>
+      </div>
     </div>
-  </div>
-
-  <!-- Floating GitHub Button -->
-  <div class="github">
-    <div>
-      <a class="github-button" href="https://github.com/tommykho" data-color-scheme="no-preference: dark_high_contrast; light: light; dark: dark;" data-size="large" aria-label="Follow @buttons on GitHub">Follow @tommykho</a><br />
-      <a class="github-button" href="https://github.com/tommykho/tommykho.github.io" data-color-scheme="no-preference: dark_high_contrast; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star buttons/github-buttons on GitHub">Star</a>
-      <a class="github-button" href="https://github.com/tommykho/tommykho.github.io/fork" data-icon="octicon-repo-forked" data-color-scheme="no-preference: dark_high_contrast; light: light; dark: dark;" aria-label="Fork buttons/github-buttons on GitHub">Fork</a>
+    <p class="wordmark" aria-hidden="true">Tommy Ho</p>
+    <div class="wrap footer-bottom">
+      <span>&copy; <span id="year">2026</span> Tommy Ho. All rights reserved.</span>
+      <nav aria-label="Footer">
+        <a href="about/">About</a><a href="/suntze/">Sun Tzu</a><a href="/fiverings/">Five Rings</a><a href="/hopbit/">Hopbit</a>
+      </nav>
     </div>
-  </div>
+  </footer>
 
-  <script async="" defer="" src="https://buttons.github.io/buttons.js"></script>
-  <script href="assets/js/main.js"></script>
-  <script>
-    window.onload = function() {
-      document.body.classList.remove('is-preload');
-    }
-    window.ontouchmove = function() {
-      return false;
-    }
-    window.onorientationchange = function() {
-      document.body.scrollTop = 0;
-    }
-  </script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <script src="assets/js/home.js" defer></script>
 </body>
 
 </html>
