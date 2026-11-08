@@ -8,6 +8,14 @@
   const year = $('#year');
   if (year) year.textContent = new Date().getFullYear();
 
+  /* ---- Theme toggle: dark (default) <-> light, shared with About ---- */
+  $('#theme-toggle')?.addEventListener('click', () => {
+    const root = document.documentElement;
+    const next = root.dataset.theme === 'light' ? 'dark' : 'light';
+    root.dataset.theme = next;
+    try { localStorage.setItem('th-theme', next); } catch (e) {}
+  });
+
   /* ---- Split the hero name into letters ---- */
   $$('[data-split]').forEach((el) => {
     const text = el.textContent;

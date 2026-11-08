@@ -276,17 +276,17 @@ button { font: inherit; color: inherit; }
 .a-suntze .seal { position: absolute; right: 22%; top: 50%; writing-mode: vertical-rl; padding: 8px 5px; font-family: var(--f-cjk); font-weight: 800; font-size: 17px; color: #f3e9d2; background: #b3261e; border-radius: 5px; box-shadow: inset 0 0 0 2px #b3261e, inset 0 0 0 4px rgba(243, 233, 210, 0.85); transform: rotate(-6deg); }
 .a-fiverings { --sbg: #0e0d0b; --sfg: #ece4d2; --sart: conic-gradient(from 200deg at 50% 50%, rgba(91, 147, 199, 0.18), rgba(226, 88, 58, 0.16), rgba(143, 176, 160, 0.16), rgba(194, 154, 91, 0.18), rgba(91, 147, 199, 0.18)), #151411; }
 .a-fiverings .enso-wrap { position: relative; width: 130px; height: 130px; margin-top: -18px; }
-.a-fiverings .enso { width: 100%; height: 100%; overflow: visible; }
+.a-fiverings .enso { position: relative; width: 100%; height: 100%; overflow: visible; }
+.a-fiverings .enso-wrap.inked .enso path { visibility: hidden; }
 .a-fiverings .ring-title {
   position: absolute; left: 51%; top: 49%; transform: translate(-50%, -50%);
   writing-mode: vertical-rl; letter-spacing: 0.12em;
-  font-family: var(--f-cjk); font-weight: 800; font-size: 19px; line-height: 1; white-space: nowrap;
+  font-family: var(--f-cjk); font-weight: 800; font-size: 13px; line-height: 1; white-space: nowrap;
   color: #ece4d2; opacity: 0; transition: opacity 1s 1.4s var(--ease);
 }
 .a-fiverings.is-in .ring-title { opacity: 1; }
 .a-fiverings .enso path { fill: none; stroke: #ece4d2; stroke-width: 4.6; stroke-linecap: round; stroke-dasharray: 1; stroke-dashoffset: 1; transition: stroke-dashoffset 2s var(--ease); }
 .a-fiverings.is-in .enso path { stroke-dashoffset: 0; }
-.a-fiverings .enso circle { fill: #d5503a; }
 .a-fiverings .els { position: absolute; bottom: 14px; display: flex; gap: 12px; font-family: var(--f-cjk); font-size: 17px; }
 .a-hopbit { --sbg: #eef8fe; --sfg: #0e264a; --sart: repeating-linear-gradient(to bottom, transparent 0 27px, #cfe4f3 27px 28px), #fff; }
 .a-hopbit .asm-art img { width: 150px; transform-origin: 57% 92%; }

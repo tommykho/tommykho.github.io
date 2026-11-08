@@ -7,6 +7,9 @@
   <title>Tommy Ho · Engineer, Creator, Builder</title>
   <meta name="description" content="Tommy Ho — manufacturing engineer and creator. Home of Sun Tzu · Modern Field Manual, Five Rings, and Hopbit: old strategy and tiny habits rebuilt as modern, AI-assisted field manuals." />
   <meta name="theme-color" content="#0b0c0f" />
+  <script>
+    try { var t = localStorage.getItem('th-theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
   <meta property="og:title" content="Tommy Ho · Engineer, Creator, Builder" />
   <meta property="og:description" content="Sun Tzu, Five Rings and Hopbit — field manuals for modern life." />
   <meta property="og:url" content="https://tommykho.github.io/" />
@@ -35,9 +38,14 @@
       <a href="/fiverings/" class="t-fiverings">Five Rings</a>
       <a href="/hopbit/" class="t-hopbit">Hopbit</a>
     </nav>
-    <a class="gh-pill" href="https://github.com/tommykho" aria-label="GitHub profile">
-      <i class="fa-brands fa-github"></i><span>tommykho</span>
-    </a>
+    <div class="tb-end">
+      <button class="theme-btn" id="theme-toggle" type="button" aria-label="Switch between dark and light themes">
+        <i class="fa-solid fa-moon"></i><i class="fa-solid fa-sun"></i>
+      </button>
+      <a class="gh-pill" href="https://github.com/tommykho" aria-label="GitHub profile">
+        <i class="fa-brands fa-github"></i><span>tommykho</span>
+      </a>
+    </div>
   </header>
 
   <main id="top">
@@ -132,7 +140,7 @@
               <a class="btn btn-ghost" href="https://github.com/tommykho/suntze"><i class="fa-brands fa-github"></i> Source</a>
             </div>
           </div>
-          <div class="panel-art art-suntze" aria-hidden="true">
+          <div class="panel-art art-suntze" aria-hidden="true" data-ink="hills">
             <svg class="ink-hills" viewBox="0 0 600 400" preserveAspectRatio="xMidYMax slice">
               <path class="h1" d="M0 300 C80 220 140 250 200 190 C260 130 320 210 380 170 C440 130 520 200 600 160 L600 400 L0 400Z" />
               <path class="h2" d="M0 340 C60 300 120 320 180 280 C250 230 300 300 370 260 C430 230 500 290 600 250 L600 400 L0 400Z" />
@@ -168,11 +176,10 @@
             </div>
           </div>
           <div class="panel-art art-fiverings" aria-hidden="true">
-            <div class="ring-stage">
+            <div class="ring-stage" data-ink="enso">
               <span class="ring-title" lang="ja">五輪書</span>
               <svg class="enso" viewBox="0 0 64 64">
                 <path d="M41 9.5C30 5.5 15 10 10.5 23c-4.6 13.3 3.6 28 17.4 31 13.6 3 25.6-5.8 27-19 .9-8.4-2.7-15.6-8.6-20.2" pathLength="1" />
-                <circle cx="45.6" cy="13.4" r="2.6" />
               </svg>
               <div class="orbit">
                 <span style="--a:0;--c:#c29a5b"><b>地<small>Ground</small></b></span>
@@ -362,6 +369,7 @@
 
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <script src="assets/js/home.js" defer></script>
+  <script src="assets/js/ink.js" defer></script>
 </body>
 
 </html>
