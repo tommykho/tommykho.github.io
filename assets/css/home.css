@@ -475,8 +475,6 @@ em { font-style: italic; }
 .enso path { fill: none; stroke: #ece4d2; stroke-width: 4.6; stroke-linecap: round; stroke-dasharray: 1; stroke-dashoffset: 1; }
 .panel.is-in .enso path { animation: draw 2.4s 0.2s var(--ease) forwards; }
 @keyframes draw { to { stroke-dashoffset: 0; } }
-/* ink.js paints these on a canvas; hide the SVG originals once it has */
-.ring-stage.inked .enso path, .art-suntze.inked .ink-hills { visibility: hidden; }
 .orbit { position: absolute; inset: 0; animation: spin 60s linear infinite; }
 .orbit span {
   --r: calc(50% + 10px);
