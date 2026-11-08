@@ -644,6 +644,7 @@ em { font-style: italic; }
   transition: transform 0.4s var(--ease), background 0.4s;
 }
 .lab:hover { transform: translateY(-4px); background: var(--bg-3); }
+.lab:not(a):hover { transform: none; }
 .lab > i { font-size: 24px; color: var(--accent); margin-bottom: auto; }
 .lab h3 { font-family: var(--f-display); font-weight: 400; font-size: 28px; line-height: 1.1; margin-top: 30px; }
 .lab p { color: var(--fg-2); font-size: 15px; }
