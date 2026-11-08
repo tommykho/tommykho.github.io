@@ -7,7 +7,7 @@ To view my GitHub Portal, a collection of my source codes showcasing all of my o
 
 | Site | Repo |
 |---|---|
-| [About](https://tommykho.github.io/about/) | [tommykho/about](https://github.com/tommykho/about) |
+| [About](https://tommykho.github.io/about/) | this repo, `about/` (formerly tommykho/about) |
 | [Sun Tzu · Modern Field Manual](https://tommykho.github.io/suntze/) | [tommykho/suntze](https://github.com/tommykho/suntze) |
 | [Five Rings · Modern Field Manual](https://tommykho.github.io/fiverings/) | [tommykho/fiverings](https://github.com/tommykho/fiverings) |
 | [Hopbit](https://tommykho.github.io/hopbit/) | [tommykho/hopbit](https://github.com/tommykho/hopbit) |
@@ -22,6 +22,12 @@ One Pages site, two channels, built by `.github/workflows/pages.yml`:
 | `stage` | https://tommykho.github.io/stage/ | beta: `noindex`, STAGE badge |
 
 A push to either branch deploys, and each deploy rebuilds both channels. The `github-pages` environment must allow both `main` and `stage`. Merge `stage` into `main` to promote. Keep the workflow file the same on both branches. Link to sister sites with root paths (`/about/`, `/suntze/`) so links work from `/stage/` too.
+
+## About page
+
+- `about/index.html` — the About page, styled as an engineering drawing (title block, callouts, specs, bill of materials, assemblies, general notes)
+- `assets/css/about.css`, `assets/js/about.js` — blueprint (dark, default) and paper (light) themes; the toggle stores `th-theme` in `localStorage`
+- `assets/images/profile.webp` / `profile.jpg` — portrait used by About and the home teaser
 
 ## Home page structure
 
