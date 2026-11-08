@@ -461,12 +461,12 @@ em { font-style: italic; }
   display: grid; place-items: center;
 }
 .ring-stage { position: relative; width: min(78%, 400px); aspect-ratio: 1; margin-top: -12%; }
-/* enso path centre sits at about (51%, 49%) of its 64x64 box */
+/* ring centre is (32.1, 31.4) of the 64x64 box; size keeps ~1 stroke width of clearance (home.js sets --ring-fs) */
 .ring-title {
-  position: absolute; left: 51%; top: 49%; transform: translate(-50%, -50%);
+  position: absolute; left: 50.2%; top: 49.1%; transform: translate(-50%, -50%);
   writing-mode: vertical-rl; letter-spacing: 0.12em;
   font-family: var(--f-cjk); font-weight: 800; line-height: 1; white-space: nowrap;
-  font-size: clamp(18px, 2.5vw, 36px);
+  font-size: var(--ring-fs, 36px);
   color: #ece4d2; opacity: 0;
 }
 .panel.is-in .ring-title { animation: ring-title 1s 2s var(--ease) forwards; }
@@ -706,7 +706,6 @@ em { font-style: italic; }
   .stats { gap: 16px; }
   .orbit span { width: 44px; height: 44px; margin: -22px; font-size: 18px; transform: rotate(calc(var(--a) * 72deg - 90deg)) translate(31vw) rotate(calc(var(--a) * -72deg + 90deg)); }
   .ring-stage { width: 62%; margin-top: -22%; }
-  .ring-title { font-size: 5.2vw; }
   .panel-art { min-height: 460px; }
   .card-journal { top: 8%; width: 58%; }
   .bunny { width: 44%; bottom: 26%; }

@@ -16,6 +16,12 @@
     try { localStorage.setItem('th-theme', next); } catch (e) {}
   });
 
+  /* ---- Five Rings: size 五輪書 to the ring (14.4% of its box ≈ 1 stroke width clearance) ---- */
+  const ring = $('.ring-stage');
+  if (ring && 'ResizeObserver' in window) {
+    new ResizeObserver(([e]) => ring.style.setProperty('--ring-fs', `${(e.contentRect.width * 0.144).toFixed(1)}px`)).observe(ring);
+  }
+
   /* ---- Split the hero name into letters ---- */
   $$('[data-split]').forEach((el) => {
     const text = el.textContent;
